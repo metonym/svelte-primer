@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- Complete `Form`, `Navigation`, `Autocomplete`, `Popover`
+- Complete `Form`, `Navigation`, `Autocomplete`
 
 - Provide examples for `SelectMenuItem`, `SelectMenuBlankSlate`
 
@@ -15,11 +15,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support `Popover` directions
 
+## [0.1.0-alpha.4](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.4) - 2020-04-26
+
+- Add `ButtonMarketing` component
+
 ## [0.1.0-alpha.3](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.3) - 2020-04-26
 
 - Add `Popover` component
 
 - Rename `type` prop to `variant` in `Button` component
+
+- Filter falsy values in class array value
 
 ## [0.1.0-alpha.2](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.2) - 2020-04-26
 
