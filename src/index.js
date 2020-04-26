@@ -4,6 +4,7 @@ export { default as Navigation } from "./Navigation";
 
 // completed
 export { default as Box } from "./Box";
+export { default as Blankslate } from "./Blankslate.svelte";
 export { default as Timeline } from "./Timeline";
 export { default as Avatar } from "./Avatar/Avatar.svelte";
 export { default as AvatarStack } from "./Avatar/AvatarStack.svelte";
