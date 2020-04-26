@@ -1,9 +1,10 @@
 // in progress
 export { default as Form } from "./Form";
 export { default as Navigation } from "./Navigation";
-export { default as Timeline } from "./Timeline";
 
 // completed
+export { default as Box } from "./Box";
+export { default as Timeline } from "./Timeline";
 export { default as Avatar } from "./Avatar/Avatar.svelte";
 export { default as AvatarStack } from "./Avatar/AvatarStack.svelte";
 export { default as AvatarParentChild } from "./Avatar/AvatarParentChild.svelte";
