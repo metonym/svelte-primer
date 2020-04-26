@@ -1,5 +1,6 @@
 <script>
   import {
+    Box,
     LabelCounter,
     LabelDiffstat,
     LabelState,
@@ -25,12 +26,37 @@
     AvatarParentChild,
     AvatarStack
   } from "svelte-primer";
-  import { Tools, Eye, Flame, GitCommit } from "svelte-octicons";
+  import { Pencil, Tools, Eye, Flame, GitCommit } from "svelte-octicons";
 </script>
 
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
+
+<Box.Box theme="blue">
+  <Box.Header>
+    <Box.Title>Box title</Box.Title>
+  </Box.Header>
+  <Alert full kind="success" dismissable>Success message</Alert>
+  <Box.Body>
+    <strong class="pr-2">Box body</strong>
+    <Box.IconButton
+      on:click={() => {
+        console.log('click');
+      }}>
+      <Pencil />
+    </Box.IconButton>
+  </Box.Body>
+  <Box.Rows>
+    <Box.Row unread>Box row one</Box.Row>
+    <Box.Row theme="hover-blue">Box row two (hover-blue)</Box.Row>
+    <Box.Row>
+      Box row three
+      <Box.RowLink href="/">Box row link</Box.RowLink>
+    </Box.Row>
+  </Box.Rows>
+  <Box.Footer>Box footer</Box.Footer>
+</Box.Box>
 
 <Timeline.Item>
   <div slot="badge">
