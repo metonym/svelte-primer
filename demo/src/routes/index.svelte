@@ -1,5 +1,6 @@
 <script>
   import {
+    Blankslate,
     Box,
     LabelCounter,
     LabelDiffstat,
@@ -32,6 +33,18 @@
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
+
+<Blankslate size="spacious" large bordered capped>
+  <h3 class="mb-1">You don’t seem to have any pull requests.</h3>
+  <p>
+    Pull requests help you discuss potential changes before they are merged into
+    the base branch.
+  </p>
+  <Button kind="primary" class="my-3">New pull request</Button>
+  <p>
+    <Button type="link-button">Learn more</Button>
+  </p>
+</Blankslate>
 
 <Box.Box theme="blue">
   <Box.Header>
