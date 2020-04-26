@@ -7,13 +7,21 @@
 </script>
 
 <details
-  class={['dropdown details-reset details-overlay d-inline-block', className].join(' ')}>
+  class={['dropdown details-reset details-overlay d-inline-block', className]
+    .filter(Boolean)
+    .join(' ')}>
   <summary class="btn" aria-haspopup="true">
     {title}
     <div class="dropdown-caret" />
   </summary>
   <ul
-    class={['dropdown-menu', `dropdown-menu-${direction}`, dark && 'dropdown-menu-dark'].join(' ')}>
+    class={[
+      'dropdown-menu',
+      `dropdown-menu-${direction}`,
+      dark && 'dropdown-menu-dark'
+    ]
+      .filter(Boolean)
+      .join(' ')}>
     <slot />
   </ul>
 </details>

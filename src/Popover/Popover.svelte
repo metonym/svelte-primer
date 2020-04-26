@@ -5,7 +5,12 @@
   export let open = false;
 </script>
 
-<div {...$$restProps} class={['Popover', className].filter(Boolean).join(' ')}>
+<div
+  {...$$restProps}
+  class={['Popover', className]
+    .filter(Boolean)
+    .filter(Boolean)
+    .join(' ')}>
   {#if open}
     <slot />
   {/if}

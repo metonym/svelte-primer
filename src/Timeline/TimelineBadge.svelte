@@ -16,7 +16,14 @@
 {#if href}
   <a
     {...$$restProps}
-    class={['TimelineItem-badge', color && `bg-${color}`, color && 'text-white', className].join(' ')}
+    class={[
+      'TimelineItem-badge',
+      color && `bg-${color}`,
+      color && 'text-white',
+      className
+    ]
+      .filter(Boolean)
+      .join(' ')}
     {href}
     on:click>
     <slot />
@@ -24,7 +31,14 @@
 {:else}
   <div
     {...$$restProps}
-    class={['TimelineItem-badge', color && `bg-${color}`, color && 'text-white', className].join(' ')}>
+    class={[
+      'TimelineItem-badge',
+      color && `bg-${color}`,
+      color && 'text-white',
+      className
+    ]
+      .filter(Boolean)
+      .join(' ')}>
     <slot />
   </div>
 {/if}

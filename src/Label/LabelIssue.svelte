@@ -7,7 +7,9 @@
 
 <span
   {...$$restProps}
-  class={['IssueLabel', `bg-${color}`, 'text-white', className].join(' ')}
+  class={['IssueLabel', `bg-${color}`, 'text-white', className]
+    .filter(Boolean)
+    .join(' ')}
   {title}
   on:click>
   <slot>{title.split('Label: ').pop()}</slot>

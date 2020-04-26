@@ -12,6 +12,15 @@
 <span
   {...$$restProps}
   aria-label={text}
-  class={['tooltipped', `tooltipped-${direction}`, align && `tooltipped-align-${align}-${alignIndent}`, noDelay && 'tooltipped-no-delay', multiline && 'tooltipped-multiline', className].join(' ')}>
+  class={[
+    'tooltipped',
+    `tooltipped-${direction}`,
+    align && `tooltipped-align-${align}-${alignIndent}`,
+    noDelay && 'tooltipped-no-delay',
+    multiline && 'tooltipped-multiline',
+    className
+  ]
+    .filter(Boolean)
+    .join(' ')}>
   <slot />
 </span>

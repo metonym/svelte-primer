@@ -8,12 +8,8 @@
 
 <Box
   {...$$restProps}
-  class={[
-    'Popover-message box-shadow-large',
-    large && 'Popover-message--large',
-    'text-left p-4 mt-2',
-    className
-  ]
+  class={['Popover-message box-shadow-large', large && 'Popover-message--large', 'text-left p-4 mt-2', className]
+    .filter(Boolean)
     .filter(Boolean)
     .join(' ')}>
   <slot />
