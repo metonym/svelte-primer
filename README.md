@@ -7,6 +7,8 @@
 
 > 🚧 Work in progress 🚧
 
+This library targets alignment with [@primer/css@14.3.0](https://github.com/primer/css).
+
 ## [Changelog](CHANGELOG.md)
 
 ## License

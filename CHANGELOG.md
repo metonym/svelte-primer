@@ -7,13 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- Complete `Avatar`, `Form`, `Navigation`, `Timeline`
-
-- Support `Autocomplete`, `Popover`
+- Complete `Form`, `Navigation`, `Autocomplete`, `Popover`
 
 - Provide examples for `SelectMenuItem`, `SelectMenuBlankSlate`
 
 - Explore controlled behavior through filtering/loading states for `SelectMenu`
+
+## [0.1.0-alpha.2](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.2) - 2020-04-26
+
+- Complete `Avatar`, `Timeline`, `Box`, `Blankslate` components
 
 ## [0.1.0-alpha.1](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.1) - 2020-04-26
 
