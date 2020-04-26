@@ -10,7 +10,7 @@
 </script>
 
 <div {...$$restProps} class="clearfix">
-  <Button type="link" size="small" class="btn-with-count" {href} on:click>
+  <Button variant="link" size="small" class="btn-with-count" {href} on:click>
     <slot />
   </Button>
   <a

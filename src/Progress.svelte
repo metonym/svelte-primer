@@ -24,7 +24,15 @@
 
 <span
   {...$$restProps}
-  class={['Progress', large && 'Progress--large', small && 'Progress--small', inline && 'd-inline-flex', className].join(' ')}
+  class={[
+    'Progress',
+    large && 'Progress--large',
+    small && 'Progress--small',
+    inline && 'd-inline-flex',
+    className
+  ]
+    .filter(Boolean)
+    .join(' ')}
   style={[inline && 'max-width: 160px;', style].join(';')}>
   <slot>
     <span class="bg-green" style="width: {progress}%;" />

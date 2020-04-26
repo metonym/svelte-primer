@@ -8,7 +8,15 @@
 
 <span
   {...$$restProps}
-  class={['Label', outline && 'Label--outline', outline && color === 'green' && 'Label--outline-green', !outline && `bg-${color}`, className].join(' ')}
+  class={[
+    'Label',
+    outline && 'Label--outline',
+    outline && color === 'green' && 'Label--outline-green',
+    !outline && `bg-${color}`,
+    className
+  ]
+    .filter(Boolean)
+    .join(' ')}
   {title}
   on:click>
   <slot />

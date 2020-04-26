@@ -1,5 +1,7 @@
 <script>
   import {
+    ButtonMarketing,
+    Popover,
     Blankslate,
     Box,
     LabelCounter,
@@ -28,6 +30,9 @@
     AvatarStack
   } from "svelte-primer";
   import { Pencil, Tools, Eye, Flame, GitCommit } from "svelte-octicons";
+
+  let open = false;
+  let large = false;
 </script>
 
 <svelte:head>
@@ -42,7 +47,7 @@
   </p>
   <Button kind="primary" class="my-3">New pull request</Button>
   <p>
-    <Button type="link-button">Learn more</Button>
+    <Button variant="link-button">Learn more</Button>
   </p>
 </Blankslate>
 
@@ -70,6 +75,25 @@
   </Box.Rows>
   <Box.Footer>Box footer</Box.Footer>
 </Box.Box>
+
+<div class="position-relative text-center">
+  <Button
+    kind="primary"
+    on:click={() => {
+      open = !open;
+    }}>
+    Toggle popover
+  </Button>
+  <Popover.Popover {open} class="right-0 left-0 position-relative">
+    <Popover.Message>
+      <h4 class="mb-2">Popover heading</h4>
+      <p>Message about this particular piece of UI.</p>
+      <Button type="submit" kind="outline" class="mt-2 text-bold">
+        Got it!
+      </Button>
+    </Popover.Message>
+  </Popover.Popover>
+</div>
 
 <Timeline.Item>
   <div slot="badge">
@@ -121,6 +145,20 @@
   </div>
   This is the message of a condensed TimelineItem
 </Timeline.Item>
+
+<Button
+  on:click={() => {
+    large = !large;
+  }}>
+  Toggle large variant
+</Button>
+
+<ButtonMarketing {large}>Default</ButtonMarketing>
+<ButtonMarketing {large} kind="outline">Outline</ButtonMarketing>
+<ButtonMarketing {large} kind="primary">Primary</ButtonMarketing>
+<div class="bg-gray-dark">
+  <ButtonMarketing {large} transparent>Transparent</ButtonMarketing>
+</div>
 
 <AvatarParentChild>
   <Avatar
@@ -177,7 +215,7 @@
 </div>
 <p>
   Some text.
-  <Button type="hidden-text" inline />
+  <Button variant="hidden-text" inline />
 </p>
 
 <ButtonWithCount href="#url" countHref="#url" count={5}>
@@ -185,7 +223,7 @@
   <span>Watch</span>
 </ButtonWithCount>
 
-<Button type="octicon" close />
+<Button variant="octicon" close />
 
 <button class="btn-link" type="button">Link button</button>
 

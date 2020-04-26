@@ -7,6 +7,13 @@
 
 <li
   {...$$restProps}
-  class={['Box-row', theme && `Box-row--${theme}`, unread && 'Box-row--unread', className].join(' ')}>
+  class={[
+    'Box-row',
+    theme && `Box-row--${theme}`,
+    unread && 'Box-row--unread',
+    className
+  ]
+    .filter(Boolean)
+    .join(' ')}>
   <slot />
 </li>
