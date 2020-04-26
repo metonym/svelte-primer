@@ -19,6 +19,7 @@ export { default as Breadcrumb } from "./Breadcrumb";
 export { default as Button } from "./Button/Button.svelte";
 export { default as ButtonGroup } from "./Button/ButtonGroup.svelte";
 export { default as ButtonWithCount } from "./Button/ButtonWithCount.svelte";
+export { default as ButtonMarketing } from "./Button/ButtonMarketing.svelte";
 export { default as Dropdown } from "./Dropdown";
 export { default as Label } from "./Label/Label.svelte";
 export { default as LabelCounter } from "./Label/LabelCounter.svelte";

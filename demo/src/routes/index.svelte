@@ -1,5 +1,6 @@
 <script>
   import {
+    ButtonMarketing,
     Popover,
     Blankslate,
     Box,
@@ -31,6 +32,7 @@
   import { Pencil, Tools, Eye, Flame, GitCommit } from "svelte-octicons";
 
   let open = false;
+  let large = false;
 </script>
 
 <svelte:head>
@@ -144,6 +146,20 @@
   This is the message of a condensed TimelineItem
 </Timeline.Item>
 
+<Button
+  on:click={() => {
+    large = !large;
+  }}>
+  Toggle large variant
+</Button>
+
+<ButtonMarketing {large}>Default</ButtonMarketing>
+<ButtonMarketing {large} kind="outline">Outline</ButtonMarketing>
+<ButtonMarketing {large} kind="primary">Primary</ButtonMarketing>
+<div class="bg-gray-dark">
+  <ButtonMarketing {large} transparent>Transparent</ButtonMarketing>
+</div>
+
 <AvatarParentChild>
   <Avatar
     parent
@@ -199,7 +215,7 @@
 </div>
 <p>
   Some text.
-  <Button type="hidden-text" inline />
+  <Button variant="hidden-text" inline />
 </p>
 
 <ButtonWithCount href="#url" countHref="#url" count={5}>
@@ -207,7 +223,7 @@
   <span>Watch</span>
 </ButtonWithCount>
 
-<Button type="octicon" close />
+<Button variant="octicon" close />
 
 <button class="btn-link" type="button">Link button</button>
 
