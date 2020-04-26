@@ -1,13 +1,13 @@
-import DropdownDivider from "./DropdownDivider.svelte";
-import DropdownDropdown from "./Dropdown.svelte";
-import DropdownHeader from "./DropdownHeader.svelte";
-import DropdownItem from "./DropdownItem.svelte";
+import Divider from "./DropdownDivider.svelte";
+import Dropdown from "./Dropdown.svelte";
+import Header from "./DropdownHeader.svelte";
+import Item from "./DropdownItem.svelte";
 
-const Dropdown = {
-  Divider: DropdownDivider,
-  Dropdown: DropdownDropdown,
-  Header: DropdownHeader,
-  Item: DropdownItem,
+const _Dropdown = {
+  Divider,
+  Dropdown,
+  Header,
+  Item,
 };
 
-export default Dropdown;
+export default _Dropdown;

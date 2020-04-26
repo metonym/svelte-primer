@@ -1,13 +1,13 @@
-import TimelineAvatar from "./TimelineAvatar.svelte";
-import TimelineBadge from "./TimelineBadge.svelte";
-import TimelineBreak from "./TimelineBreak.svelte";
-import TimelineItem from "./TimelineItem.svelte";
+import Avatar from "./TimelineAvatar.svelte";
+import Badge from "./TimelineBadge.svelte";
+import Break from "./TimelineBreak.svelte";
+import Item from "./TimelineItem.svelte";
 
 const Timeline = {
-  Avatar: TimelineAvatar,
-  Badge: TimelineBadge,
-  Break: TimelineBreak,
-  Item: TimelineItem,
+  Avatar,
+  Badge,
+  Break,
+  Item,
 };
 
 export default Timeline;

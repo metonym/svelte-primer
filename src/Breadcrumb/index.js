@@ -1,9 +1,9 @@
-import BreadcrumbBreadcrumb from "./Breadcrumb.svelte";
-import BreadcrumbItem from "./BreadcrumbItem.svelte";
+import Breadcrumb from "./Breadcrumb.svelte";
+import Item from "./BreadcrumbItem.svelte";
 
-const Breadcrumb = {
-  Breadcrumb: BreadcrumbBreadcrumb,
-  Item: BreadcrumbItem,
+const _Breadcrumb = {
+  Breadcrumb,
+  Item,
 };
 
-export default Breadcrumb;
+export default _Breadcrumb;

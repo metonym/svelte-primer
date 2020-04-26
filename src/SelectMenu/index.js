@@ -1,27 +1,27 @@
-import SelectMenuBlankSlate from "./SelectMenuBlankSlate.svelte";
-import SelectMenuDivider from "./SelectMenuDivider.svelte";
-import SelectMenuFilter from "./SelectMenuFilter.svelte";
-import SelectMenuFooter from "./SelectMenuFooter.svelte";
-import SelectMenuItem from "./SelectMenuItem.svelte";
-import SelectMenuLoading from "./SelectMenuLoading.svelte";
-import SelectMenuMessage from "./SelectMenuMessage.svelte";
-import SelectMenuSelectMenu from "./SelectMenu.svelte";
-import SelectMenuTab from "./SelectMenuTab.svelte";
-import SelectMenuTabs from "./SelectMenuTabs.svelte";
-import SelectMenuTitle from "./SelectMenuTitle.svelte";
+import BlankSlate from "./SelectMenuBlankSlate.svelte";
+import Divider from "./SelectMenuDivider.svelte";
+import Filter from "./SelectMenuFilter.svelte";
+import Footer from "./SelectMenuFooter.svelte";
+import Item from "./SelectMenuItem.svelte";
+import Loading from "./SelectMenuLoading.svelte";
+import Message from "./SelectMenuMessage.svelte";
+import SelectMenu from "./SelectMenu.svelte";
+import Tab from "./SelectMenuTab.svelte";
+import Tabs from "./SelectMenuTabs.svelte";
+import Title from "./SelectMenuTitle.svelte";
 
-const SelectMenu = {
-  BlankSlate: SelectMenuBlankSlate,
-  Divider: SelectMenuDivider,
-  Filter: SelectMenuFilter,
-  Footer: SelectMenuFooter,
-  Item: SelectMenuItem,
-  Loading: SelectMenuLoading,
-  Message: SelectMenuMessage,
-  SelectMenu: SelectMenuSelectMenu,
-  Tab: SelectMenuTab,
-  Tabs: SelectMenuTabs,
-  Title: SelectMenuTitle,
+const _SelectMenu = {
+  BlankSlate,
+  Divider,
+  Filter,
+  Footer,
+  Item,
+  Loading,
+  Message,
+  SelectMenu,
+  Tab,
+  Tabs,
+  Title,
 };
 
-export default SelectMenu;
+export default _SelectMenu;
