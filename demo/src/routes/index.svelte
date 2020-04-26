@@ -45,7 +45,7 @@
   </p>
   <Button kind="primary" class="my-3">New pull request</Button>
   <p>
-    <Button type="link-button">Learn more</Button>
+    <Button variant="link-button">Learn more</Button>
   </p>
 </Blankslate>
 

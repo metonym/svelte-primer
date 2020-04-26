@@ -1,5 +1,6 @@
 <script>
-  export let type = "button"; // 'button' | 'link-button' | 'link' | 'octicon' | 'hidden-text'
+  export let type = "button";
+  export let variant = "button"; // 'button' | 'link-button' | 'link' | 'octicon' | 'hidden-text'
   export let href = "javascript:void(0);";
   export let size = undefined; // 'small' | 'large'
   export let kind = undefined; // 'primary' | 'danger' | 'outline'
@@ -13,10 +14,10 @@
   import X from "svelte-octicons/lib/X";
 </script>
 
-{#if type === 'button'}
+{#if variant === 'button'}
   <button
     {...$$restProps}
-    type="button"
+    {type}
     class:btn={true}
     class:btn-sm={size === 'small'}
     class:btn-large={size === 'large'}
@@ -31,13 +32,13 @@
   </button>
 {/if}
 
-{#if type === 'link-button'}
-  <button {...$$restProps} type="button" class:btn-link={true} on:click>
+{#if variant === 'link-button'}
+  <button {...$$restProps} {type} class:btn-link={true} on:click>
     <slot />
   </button>
 {/if}
 
-{#if type === 'link'}
+{#if variant === 'link'}
   <a
     {...$$restProps}
     role="button"
@@ -56,10 +57,10 @@
   </a>
 {/if}
 
-{#if type === 'octicon'}
+{#if variant === 'octicon'}
   <button
     {...$$restProps}
-    type="button"
+    {type}
     class:btn-octicon={!close}
     class:btn-octicon-danger={kind === 'danger'}
     class:close-button={close}
@@ -72,11 +73,11 @@
   </button>
 {/if}
 
-{#if type === 'hidden-text'}
+{#if variant === 'hidden-text'}
   <span class="hidden-text-expander" class:inline>
     <button
       {...$$restProps}
-      type="button"
+      {type}
       class:ellipsis-expander={true}
       aria-expanded={expanded}
       on:click
