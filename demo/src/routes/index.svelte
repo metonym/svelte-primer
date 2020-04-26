@@ -17,6 +17,7 @@
     Truncate,
     SelectMenu,
     Toast,
+    Timeline,
     Subhead,
     BoxOverlay,
     DashedConnection,
@@ -24,12 +25,63 @@
     AvatarParentChild,
     AvatarStack
   } from "svelte-primer";
-  import { Tools, Eye } from "svelte-octicons";
+  import { Tools, Eye, Flame, GitCommit } from "svelte-octicons";
 </script>
 
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
+
+<Timeline.Item>
+  <div slot="badge">
+    <Timeline.Badge href="#heading-1">
+      <Flame />
+    </Timeline.Badge>
+  </div>
+  <a href="/" class="text-bold link-gray-dark mr-1">Monalisa</a>
+  created one
+  <a href="/" class="text-bold link-gray-dark">hot potato</a>
+  <a href="/" class="link-gray">Just now</a>
+</Timeline.Item>
+<Timeline.Item>
+  <div slot="avatar">
+    <Timeline.Avatar>
+      <Avatar
+        height={40}
+        width={40}
+        alt="jonrohan"
+        src="https://github.com/jonrohan.png?v=3&s=96" />
+    </Timeline.Avatar>
+  </div>
+  <div slot="badge">
+    <Timeline.Badge>
+      <Flame />
+    </Timeline.Badge>
+  </div>
+  <a href="/" class="text-bold link-gray-dark mr-1">Monalisa</a>
+  created one
+  <a href="/" class="text-bold link-gray-dark">hot potato</a>
+  <a href="/" class="link-gray">Just now</a>
+</Timeline.Item>
+<Timeline.Item>
+  <div slot="badge">
+    <Timeline.Badge>
+      <Flame />
+    </Timeline.Badge>
+  </div>
+  <a href="/" class="text-bold link-gray-dark mr-1">Monalisa</a>
+  created one
+  <a href="/" class="text-bold link-gray-dark">hot potato</a>
+  <a href="/" class="link-gray">Just now</a>
+</Timeline.Item>
+<Timeline.Item condensed>
+  <div slot="badge">
+    <Timeline.Badge>
+      <GitCommit />
+    </Timeline.Badge>
+  </div>
+  This is the message of a condensed TimelineItem
+</Timeline.Item>
 
 <AvatarParentChild>
   <Avatar
