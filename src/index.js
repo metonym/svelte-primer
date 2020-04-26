@@ -3,6 +3,7 @@ export { default as Form } from "./Form";
 export { default as Navigation } from "./Navigation";
 
 // completed
+export { default as Popover } from "./Popover";
 export { default as Box } from "./Box";
 export { default as Blankslate } from "./Blankslate.svelte";
 export { default as Timeline } from "./Timeline";

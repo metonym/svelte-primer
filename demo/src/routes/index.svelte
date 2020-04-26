@@ -1,5 +1,6 @@
 <script>
   import {
+    Popover,
     Blankslate,
     Box,
     LabelCounter,
@@ -28,6 +29,8 @@
     AvatarStack
   } from "svelte-primer";
   import { Pencil, Tools, Eye, Flame, GitCommit } from "svelte-octicons";
+
+  let open = false;
 </script>
 
 <svelte:head>
@@ -70,6 +73,25 @@
   </Box.Rows>
   <Box.Footer>Box footer</Box.Footer>
 </Box.Box>
+
+<div class="position-relative text-center">
+  <Button
+    kind="primary"
+    on:click={() => {
+      open = !open;
+    }}>
+    Toggle popover
+  </Button>
+  <Popover.Popover {open} class="right-0 left-0 position-relative">
+    <Popover.Message>
+      <h4 class="mb-2">Popover heading</h4>
+      <p>Message about this particular piece of UI.</p>
+      <Button type="submit" kind="outline" class="mt-2 text-bold">
+        Got it!
+      </Button>
+    </Popover.Message>
+  </Popover.Popover>
+</div>
 
 <Timeline.Item>
   <div slot="badge">
