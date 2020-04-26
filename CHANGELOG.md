@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support `Popover` directions
 
+## [0.1.0-alpha.3](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.3) - 2020-04-26
+
+- Add `Popover` component
+
+- Rename `type` prop to `variant` in `Button` component
+
 ## [0.1.0-alpha.2](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.2) - 2020-04-26
 
 - Complete `Avatar`, `Timeline`, `Box`, `Blankslate` components
