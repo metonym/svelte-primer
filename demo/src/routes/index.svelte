@@ -18,7 +18,11 @@
     SelectMenu,
     Toast,
     Subhead,
-    BoxOverlay
+    BoxOverlay,
+    DashedConnection,
+    CircleBadge,
+    AvatarParentChild,
+    AvatarStack
   } from "svelte-primer";
   import { Tools, Eye } from "svelte-octicons";
 </script>
@@ -26,6 +30,19 @@
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
+
+<AvatarParentChild>
+  <Avatar
+    parent
+    alt="jonrohan"
+    src="https://github.com/jonrohan.png?v=3&s=96" />
+  <Avatar child alt="josh" src="https://github.com/josh.png?v=3&s=40" />
+</AvatarParentChild>
+
+<AvatarStack>
+  <Avatar alt="jonrohan" src="https://github.com/jonrohan.png?v=3&s=96" />
+  <Avatar alt="jonrohan" src="https://github.com/jonrohan.png?v=3&s=96" />
+</AvatarStack>
 
 <Breadcrumb.Breadcrumb>
   <Breadcrumb.Item>One</Breadcrumb.Item>
@@ -40,6 +57,14 @@
   <Dropdown.Item>two</Dropdown.Item>
 </Dropdown.Dropdown>
 
+<DashedConnection>
+  <li>
+    <CircleBadge>1</CircleBadge>
+  </li>
+  <li>
+    <CircleBadge>2</CircleBadge>
+  </li>
+</DashedConnection>
 <BoxOverlay size="wide">1</BoxOverlay>
 <div>
   <Label color="green">green outlined label</Label>

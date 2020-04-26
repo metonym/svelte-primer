@@ -1,10 +1,14 @@
 // in progress
-export { default as Avatar } from "./Avatar.svelte";
 export { default as Form } from "./Form";
 export { default as Navigation } from "./Navigation";
 export { default as Timeline } from "./Timeline";
 
 // completed
+export { default as Avatar } from "./Avatar/Avatar.svelte";
+export { default as AvatarStack } from "./Avatar/AvatarStack.svelte";
+export { default as AvatarParentChild } from "./Avatar/AvatarParentChild.svelte";
+export { default as CircleBadge } from "./Avatar/CircleBadge.svelte";
+export { default as DashedConnection } from "./Avatar/DashedConnection.svelte";
 export { default as Alert } from "./Alert.svelte";
 export { default as BoxOverlay } from "./BoxOverlay.svelte";
 export { default as BranchName } from "./BranchName.svelte";
