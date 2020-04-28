@@ -18,7 +18,7 @@
     "svelte-octicons": "^9.6.0"
   },
   "devDependencies": {
-    "rollup": "^2.7.2",
+    "rollup": "^2.7.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.2.1",
     "svelte": "^3.20.x"
