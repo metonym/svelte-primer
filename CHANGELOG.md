@@ -7,13 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- Complete `Form`, `Navigation`, `Autocomplete`
+- Complete `Form`, `Autocomplete`
 
 - Provide examples for `SelectMenuItem`, `SelectMenuBlankSlate`
 
 - Explore controlled behavior through filtering/loading states for `SelectMenu`
 
 - Support `Popover` directions
+
+- Support `Navigation` filter context
+
+## [0.1.0-alpha.5](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.5) - 2020-04-28
+
+- Add `Navigation` component
 
 ## [0.1.0-alpha.4](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.4) - 2020-04-26
 
