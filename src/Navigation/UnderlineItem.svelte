@@ -5,8 +5,8 @@
 
 <a
   {...$$restProps}
-  class:menu-item={true}
-  aria-current={current ? 'page' : undefined}
-  {href}>
+  class:UnderlineNav-item={true}
+  {href}
+  aria-current={current ? 'page' : undefined}>
   <slot />
 </a>

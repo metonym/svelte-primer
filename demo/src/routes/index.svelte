@@ -33,6 +33,7 @@
 
   let open = false;
   let large = false;
+  let value = "";
 </script>
 
 <svelte:head>
@@ -267,6 +268,7 @@
 <Label>Label 1</Label>
 
 <Navigation.Menu>
+  <span slot="heading" let:props {...props}>Menu heading</span>
   <Navigation.MenuItem current>Link 1</Navigation.MenuItem>
   <Navigation.MenuItem>
     <Tools />
@@ -274,6 +276,56 @@
   </Navigation.MenuItem>
 </Navigation.Menu>
 
+<Navigation.Underline align="right">
+  <Navigation.UnderlineItem current>Link 1</Navigation.UnderlineItem>
+  <Navigation.UnderlineItem>
+    <Navigation.UnderlineOcticon octicon={Tools} />
+    <span>Item 2</span>
+    <LabelCounter>6</LabelCounter>
+  </Navigation.UnderlineItem>
+  <div slot="actions" let:props {...props}>
+    <a class="btn" href="/">Button</a>
+  </div>
+</Navigation.Underline>
+
+<Navigation.SideNav bordered>
+  <Navigation.SideNavItem>Account</Navigation.SideNavItem>
+  <Navigation.SideNavItem current>Profile</Navigation.SideNavItem>
+  <Navigation.SideNav class="bg-white border-top py-3 pl-6">
+    <Navigation.SideNavSubItem>Account</Navigation.SideNavSubItem>
+  </Navigation.SideNav>
+  <Navigation.SideNavItem>Emails</Navigation.SideNavItem>
+</Navigation.SideNav>
+
+<aside class="bg-gray-light border p-3" style="max-width: 360px">
+  <h5 class="text-gray mb-2 pb-1 border-bottom">Menu</h5>
+  <Navigation.SideNav>
+    <Navigation.SideNavSubItem>Account</Navigation.SideNavSubItem>
+    <Navigation.SideNavSubItem current>Profile</Navigation.SideNavSubItem>
+  </Navigation.SideNav>
+</aside>
+
+<Navigation.TabNav>
+  <div slot="extra" let:props {...props}>Tabnav widget text here.</div>
+  <Navigation.TabNavItem current>Tab 1</Navigation.TabNavItem>
+  <Navigation.TabNavItem>Tab 2</Navigation.TabNavItem>
+</Navigation.TabNav>
+
+<Navigation.FilterList>
+  <Navigation.FilterListItem>First filter</Navigation.FilterListItem>
+  <Navigation.FilterListItem current>
+    Second filter
+    <span class="count" title="results">3</span>
+  </Navigation.FilterListItem>
+  <Navigation.FilterListItem>Third filter</Navigation.FilterListItem>
+</Navigation.FilterList>
+
+<Navigation.SubNav search bind:value>
+  <Navigation.SubNavItem current>One</Navigation.SubNavItem>
+  <Navigation.SubNavItem>Two</Navigation.SubNavItem>
+  <Navigation.SubNavItem>Three</Navigation.SubNavItem>
+</Navigation.SubNav>
+{value}
 <LabelCounter>16</LabelCounter>
 
 <Tooltip

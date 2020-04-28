@@ -5,7 +5,7 @@
 
 <a
   {...$$restProps}
-  class:menu-item={true}
+  class:filter-item={true}
   aria-current={current ? 'page' : undefined}
   {href}>
   <slot />
