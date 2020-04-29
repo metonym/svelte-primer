@@ -5,9 +5,15 @@
 
 > Svelte implementation of the GitHub Primer design system.
 
-> 🚧 Work in progress 🚧
+This component library implements [Primer CSS components](https://primer.style/css/components).
 
-This library targets alignment with [@primer/css@14.3.0](https://github.com/primer/css).
+## Not supported
+
+- [Popover directions](https://primer.style/css/components/popover)
+
+- [Navigation Search filter context](https://primer.style/css/components/navigation#filter-list)
+
+- [Autocomplete Suggester](https://primer.style/css/components/autocomplete#suggester): use the [text-expander-element](https://github.com/github/text-expander-element)
 
 ## [Changelog](CHANGELOG.md)
 
