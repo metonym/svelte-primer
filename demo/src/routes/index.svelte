@@ -1,5 +1,6 @@
 <script>
   import {
+    Form,
     ButtonMarketing,
     Popover,
     Blankslate,
@@ -34,6 +35,8 @@
   let open = false;
   let large = false;
   let value = "";
+  let radioGroupValue = undefined;
+  let selectValue = "Git";
 </script>
 
 <svelte:head>
@@ -52,6 +55,46 @@
   </p>
 </Blankslate>
 
+<Form.Form>
+  <Form.Checkbox type="radio" label="Not available for hire" name="hireme" />
+  <Form.Checkbox child type="radio" label="Available for hire" name="hireme">
+    <span class="d-block mb-1">Available hours per week</span>
+    <input type="text" name="" class="form-control input-contrast" size="3" />
+    <span class="text-small text-gray pl-2">hours per week</span>
+  </Form.Checkbox>
+</Form.Form>
+
+<Form.RadioGroup
+  bind:value={radioGroupValue}
+  options={[{ value: 'Option A' }, { value: 'Option B' }, { value: 'Option C' }]} />
+{radioGroupValue}
+<Form.Group
+  label="Example text"
+  validation="error"
+  validationText="Success"
+  let:props>
+  <Form.Input {...props} placeholder="Type something..." />
+</Form.Group>
+
+<Form.InputGroup>
+  <Form.Input />
+  <div slot="button">
+    <Button aria-label="Copy to clipboard">
+      <Tools />
+    </Button>
+  </div>
+</Form.InputGroup>
+
+<Form.Select
+  bind:value={selectValue}
+  options={[{ value: 'Choose an option' }, { value: 'Git' }, { value: 'Subversion' }]} />
+{selectValue}
+<div
+  on:click={() => {
+    selectValue = 'Choose an option';
+  }}>
+  Reset selectValue
+</div>
 <Box.Box theme="blue">
   <Box.Header>
     <Box.Title>Box title</Box.Title>
