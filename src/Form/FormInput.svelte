@@ -21,8 +21,14 @@
   class:input-hide-webkit-autofill={hideWebkitAutofill}
   {type}
   {placeholder}
-  aria-label={placeholder}
   {value}
+  aria-label={placeholder}
+  on:input
   on:input={({ target }) => {
     value = target.value;
-  }} />
+  }}
+  on:change
+  on:focus
+  on:blur
+  on:keydown
+  on:keyup />

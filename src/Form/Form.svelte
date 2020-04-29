@@ -1,3 +1,3 @@
-<form on:submit|preventDefault>
+<form {...$$restProps} on:submit|preventDefault>
   <slot />
 </form>
