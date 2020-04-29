@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support `Navigation` filter context
 
+## [0.1.0-alpha.6](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.6) - 2020-04-29
+
+- Add `Form` component
+
 ## [0.1.0-alpha.5](https://github.com/metonym/svelte-primer/releases/tag/v0.1.0-alpha.5) - 2020-04-28
 
 - Add `Navigation` component
