@@ -1,5 +1,6 @@
 <script>
   import {
+    Autocomplete,
     Form,
     ButtonMarketing,
     Popover,
@@ -84,6 +85,14 @@
     </Button>
   </div>
 </Form.InputGroup>
+
+<Autocomplete.Autocomplete
+  aria-label="Search by user"
+  placeholder="Search by user">
+  <Autocomplete.Item selected>GitHub Inc</Autocomplete.Item>
+  <Autocomplete.Item>Hubot</Autocomplete.Item>
+  <Autocomplete.Item>Monalisa Octocat</Autocomplete.Item>
+</Autocomplete.Autocomplete>
 
 <Form.Select
   bind:value={selectValue}

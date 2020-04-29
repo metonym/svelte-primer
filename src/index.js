@@ -1,4 +1,5 @@
 export { default as Alert } from "./Alert.svelte";
+export { default as Autocomplete } from "./Autocomplete";
 export { default as Avatar } from "./Avatar/Avatar.svelte";
 export { default as AvatarParentChild } from "./Avatar/AvatarParentChild.svelte";
 export { default as AvatarStack } from "./Avatar/AvatarStack.svelte";
