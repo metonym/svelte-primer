@@ -1,6 +1,8 @@
 import resolve from "rollup-plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
-import pkg from "./package.json";
+import { sizeSnapshot } from "rollup-plugin-size-snapshot";
+import { terser } from "rollup-plugin-terser";
+import { main, module, name } from "./package.json";
 
 export default ["es", "umd"].map((format) => {
   const UMD = format === "umd";
@@ -9,9 +11,14 @@ export default ["es", "umd"].map((format) => {
     input: "src",
     output: {
       format,
-      file: UMD ? pkg.main : pkg.module,
-      name: UMD ? pkg.name : undefined,
+      file: UMD ? main : module,
+      name: UMD ? name : undefined,
     },
-    plugins: [svelte(), resolve()],
+    plugins: [
+      svelte(),
+      resolve(),
+      sizeSnapshot({ printInfo: false }),
+      UMD && terser(),
+    ],
   };
 });
