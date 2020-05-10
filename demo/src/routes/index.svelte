@@ -1,39 +1,47 @@
 <script>
   import {
-    Pagination,
-    BranchName,
+    Alert,
     Autocomplete,
-    Form,
-    ButtonMarketing,
-    Popover,
+    Avatar,
+    AvatarParentChild,
+    AvatarStack,
     Blankslate,
     Box,
+    BoxOverlay,
+    BranchName,
+    Breadcrumb,
+    Button,
+    ButtonMarketing,
+    ButtonWithCount,
+    CircleBadge,
+    DashedConnection,
+    Dropdown,
+    Form,
+    Header,
+    Label,
     LabelCounter,
     LabelDiffstat,
-    LabelState,
     LabelIssue,
-    Breadcrumb,
-    Dropdown,
-    Button,
-    ButtonWithCount,
-    Avatar,
-    Alert,
-    Navigation,
+    LabelState,
     Loader,
-    Label,
-    Tooltip,
-    Truncate,
+    Navigation,
+    Pagination,
+    Popover,
     SelectMenu,
-    Toast,
-    Timeline,
     Subhead,
-    BoxOverlay,
-    DashedConnection,
-    CircleBadge,
-    AvatarParentChild,
-    AvatarStack
+    Timeline,
+    Toast,
+    Tooltip,
+    Truncate
   } from "svelte-primer";
-  import { Pencil, Tools, Eye, Flame, GitCommit } from "svelte-octicons";
+  import {
+    MarkGithub,
+    Pencil,
+    Tools,
+    Eye,
+    Flame,
+    GitCommit
+  } from "svelte-octicons";
 
   let open = false;
   let large = false;
@@ -45,6 +53,31 @@
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
+
+<Header.Header>
+  <Header.Item>
+    <Header.Link href="#" class="f4 d-flex flex-items-center">
+      <MarkGithub
+        height="32"
+        width="32"
+        class="octicon octicon-mark-github mr-2" />
+      <span>GitHub</span>
+    </Header.Link>
+  </Header.Item>
+  <Header.Item>
+    <input type="search" class="form-control input-dark" />
+  </Header.Item>
+  <Header.Item full>Menu</Header.Item>
+  <Header.Item class="mr-0" />
+  <div class="Header-item mr-0">
+    <Avatar
+      small
+      alt="jonrohan"
+      src="https://github.com/jonrohan.png?v=3&s=64"
+      width="20"
+      height="20" />
+  </div>
+</Header.Header>
 
 <Pagination.Pagination>
   <Pagination.Button kind="previous" />

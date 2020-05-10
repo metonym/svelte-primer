@@ -16,6 +16,7 @@ export { default as CircleBadge } from "./Avatar/CircleBadge.svelte";
 export { default as DashedConnection } from "./Avatar/DashedConnection.svelte";
 export { default as Dropdown } from "./Dropdown";
 export { default as Form } from "./Form";
+export { default as Header } from "./Header";
 export { default as Label } from "./Label/Label.svelte";
 export { default as LabelCounter } from "./Label/LabelCounter.svelte";
 export { default as LabelDiffstat } from "./Label/LabelDiffstat.svelte";

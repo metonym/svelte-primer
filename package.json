@@ -15,10 +15,10 @@
     "svelte": "^3.20.x"
   },
   "dependencies": {
-    "svelte-octicons": "^9.6.0"
+    "svelte-octicons": "^9.6.1"
   },
   "devDependencies": {
-    "rollup": "^2.8.2",
+    "rollup": "^2.9.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-size-snapshot": "^0.11.0",
     "rollup-plugin-svelte": "^5.2.1",
