@@ -13,13 +13,10 @@
    * </Progress>
    */
 
-  let className = "";
-  export { className as class };
   export let progress = 50;
   export let large = false;
   export let small = false;
   export let inline = false;
-  export let style = undefined;
 </script>
 
 <span
@@ -29,11 +26,11 @@
     large && 'Progress--large',
     small && 'Progress--small',
     inline && 'd-inline-flex',
-    className
+    $$restProps.class
   ]
     .filter(Boolean)
     .join(' ')}
-  style={[inline && 'max-width: 160px;', style].join(';')}>
+  style={[inline && 'max-width: 160px;', $$restProps.style].join(';')}>
   <slot>
     <span class="bg-green" style="width: {progress}%;" />
   </slot>

@@ -1,6 +1,4 @@
 <script>
-  let className;
-  export { className as class };
   export let theme = undefined; // 'gray' | 'yellow' | 'blue' string:{color}
   export let unread = false;
 </script>
@@ -11,7 +9,7 @@
     'Box-row',
     theme && `Box-row--${theme}`,
     unread && 'Box-row--unread',
-    className
+    $$restProps.class
   ]
     .filter(Boolean)
     .join(' ')}>

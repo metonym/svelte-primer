@@ -1,6 +1,4 @@
 <script>
-  let className = undefined;
-  export { className as class };
   export let color = undefined; // 'blue' | 'green' | 'red' | string:{color}
   export let href = undefined;
 
@@ -20,7 +18,7 @@
       'TimelineItem-badge',
       color && `bg-${color}`,
       color && 'text-white',
-      className
+      $$restProps.class
     ]
       .filter(Boolean)
       .join(' ')}
@@ -35,7 +33,7 @@
       'TimelineItem-badge',
       color && `bg-${color}`,
       color && 'text-white',
-      className
+      $$restProps.class
     ]
       .filter(Boolean)
       .join(' ')}>

@@ -1,6 +1,4 @@
 <script>
-  let className = "";
-  export { className as class };
   export let direction = "n"; // 'n' | 'ne' | 'e' | 'se' | 's' | 'sw' | 'w' | 'nw'
   export let text = "Tooltip text";
   export let align = undefined; // 'left' | 'right'
@@ -18,7 +16,7 @@
     align && `tooltipped-align-${align}-${alignIndent}`,
     noDelay && 'tooltipped-no-delay',
     multiline && 'tooltipped-multiline',
-    className
+    $$restProps.class
   ]
     .filter(Boolean)
     .join(' ')}>

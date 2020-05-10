@@ -1,7 +1,4 @@
 <script>
-  let className = "";
-  export { className as class };
-  export let style = undefined;
   export let fixed = false;
 </script>
 
@@ -11,10 +8,10 @@
     'css-truncate',
     !fixed && 'css-truncate-overflow',
     fixed && 'css-truncate-target',
-    className
+    $$restProps.class
   ]
     .filter(Boolean)
     .join(' ')}
-  style={[!style && fixed && 'max-width: 125px', style].join(';')}>
+  style={[!$$restProps.style && fixed && 'max-width: 125px', $$restProps.style].join(';')}>
   <slot />
 </div>

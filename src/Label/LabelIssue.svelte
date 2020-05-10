@@ -1,13 +1,11 @@
 <script>
-  let className = undefined;
-  export { className as class };
   export let title = "Label: title";
   export let color = "blue"; // 'blue' | 'green' | 'red' | string:{color}
 </script>
 
 <span
   {...$$restProps}
-  class={['IssueLabel', `bg-${color}`, 'text-white', className]
+  class={['IssueLabel', `bg-${color}`, 'text-white', $$restProps.class]
     .filter(Boolean)
     .join(' ')}
   {title}

@@ -1,6 +1,4 @@
 <script>
-  let className = undefined;
-  export { className as class };
   export let title = undefined;
   export let color = "blue"; // 'blue' | 'green' | 'gray' | 'gray-darker' | 'orange'
   export let outline = false;
@@ -13,7 +11,7 @@
     outline && 'Label--outline',
     outline && color === 'green' && 'Label--outline-green',
     !outline && `bg-${color}`,
-    className
+    $$restProps.class
   ]
     .filter(Boolean)
     .join(' ')}
