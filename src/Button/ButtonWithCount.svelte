@@ -1,7 +1,7 @@
 <script>
-  export let href = "javascript:void(0);";
+  export let href = "#";
   export let count = 0;
-  export let countHref = "javascript:void(0);";
+  export let countHref = "#";
 
   import { createEventDispatcher } from "svelte";
   import Button from "./Button.svelte";

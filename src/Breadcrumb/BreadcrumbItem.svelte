@@ -1,6 +1,6 @@
 <script>
   export let current = false;
-  export let href = "javascript:void(0);";
+  export let href = "#";
 </script>
 
 {#if current}

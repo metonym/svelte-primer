@@ -1,7 +1,7 @@
 <script>
   export let type = "button";
   export let variant = "button"; // 'button' | 'link-button' | 'link' | 'octicon' | 'hidden-text'
-  export let href = "javascript:void(0);";
+  export let href = "#";
   export let size = undefined; // 'small' | 'large'
   export let kind = undefined; // 'primary' | 'danger' | 'outline'
   export let disabled = false;

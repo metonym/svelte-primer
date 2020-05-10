@@ -1,5 +1,5 @@
 <script>
-  export let href = "javascript:void(0);";
+  export let href = "#";
   export let current = false;
 
   $: props = { "aria-current": current ? "page" : undefined };
