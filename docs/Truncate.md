@@ -42,7 +42,7 @@ None.
 
 None.
 
-## Kitchen Sink Shorthand Notation
+## Component Signature
 
 ```jsx
 <Truncate fixed={true}>
