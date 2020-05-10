@@ -1,6 +1,6 @@
 {
   "name": "svelte-primer",
-  "version": "0.1.0-rc.2",
+  "version": "0.1.0-rc.3",
   "license": "MIT",
   "description": "Svelte implementation of the GitHub Primer design system",
   "author": "Eric Liu (https://github.com/metonym)",
