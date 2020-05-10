@@ -42,9 +42,9 @@ Forwarded to the top-level element.
 
 ### Forwarded Events
 
-| Event    | e.detail `on:event="({ detail }) => {}"` |
-| :------- | :--------------------------------------- |
-| on:click | `undefined`                              |
+| Event    | e.detail    |
+| :------- | :---------- |
+| on:click | `undefined` |
 
 ### Lifecycle Events
 
