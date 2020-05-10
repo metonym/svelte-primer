@@ -24,7 +24,7 @@ import { Truncate } from "svelte-primer";
 | :---- | :-------- | :------ |
 | fixed | `boolean` | `false` |
 
-### `$$restProps`
+### \$\$restProps
 
 Forwarded to the top-level `div` element.
 
@@ -35,6 +35,10 @@ Forwarded to the top-level `div` element.
 | default | `undefined` |
 
 ### Forwarded Events
+
+None.
+
+### Lifecycle Events
 
 None.
 
