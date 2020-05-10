@@ -11,7 +11,7 @@
   $: block_neutral = from(neutral);
 </script>
 
-<span {...$$restProps} class:diffstat={true}>
+<span {...$$restProps} class:diffstat={true} on:click>
   <slot name="size">
     <span class="text-green">
       <slot name="added" />

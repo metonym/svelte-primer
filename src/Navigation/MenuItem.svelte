@@ -7,6 +7,7 @@
   {...$$restProps}
   class:menu-item={true}
   aria-current={current ? 'page' : undefined}
-  {href}>
+  {href}
+  on:click>
   <slot />
 </a>

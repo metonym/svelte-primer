@@ -6,7 +6,8 @@
 <a
   {...$$restProps}
   class:UnderlineNav-item={true}
+  aria-current={current ? 'page' : undefined}
   {href}
-  aria-current={current ? 'page' : undefined}>
+  on:click>
   <slot />
 </a>

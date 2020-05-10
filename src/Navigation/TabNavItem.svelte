@@ -7,6 +7,7 @@
   {...$$restProps}
   class:tabnav-tab={true}
   aria-current={current ? 'page' : undefined}
-  {href}>
+  {href}
+  on:click>
   <slot />
 </a>

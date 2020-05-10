@@ -3,11 +3,11 @@
 </script>
 
 {#if href}
-  <a {...$$restProps} class:branch-name={true} {href}>
+  <a {...$$restProps} class:branch-name={true} {href} on:click>
     <slot />
   </a>
 {:else}
-  <span {...$$restProps} class:branch-name={true}>
+  <span {...$$restProps} class:branch-name={true} on:click>
     <slot />
   </span>
 {/if}

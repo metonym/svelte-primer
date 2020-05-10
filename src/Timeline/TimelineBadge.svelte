@@ -36,7 +36,8 @@
       $$restProps.class
     ]
       .filter(Boolean)
-      .join(' ')}>
+      .join(' ')}
+    on:click>
     <slot />
   </div>
 {/if}
