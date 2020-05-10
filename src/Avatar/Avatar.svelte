@@ -1,7 +1,5 @@
 <script>
   export let small = false;
-  export let alt = undefined;
-  export let src = undefined;
   export let parent = false;
   export let child = false;
   export let width = 72;
@@ -40,12 +38,11 @@
   }
 </script>
 
+<!-- svelte-ignore a11y-missing-attribute -->
 <img
   {...$$restProps}
   class:avatar={true}
   class:avatar-small={small}
   class:avatar-child={child}
-  {alt}
-  {src}
   {width}
   {height} />
