@@ -24,6 +24,7 @@ export { default as LabelState } from "./Label/LabelState.svelte";
 export { default as Loader } from "./Loader.svelte";
 export { default as Navigation } from "./Navigation";
 export { default as Pagehead } from "./Pagehead.svelte";
+export { default as Pagination } from "./Pagination";
 export { default as Popover } from "./Popover";
 export { default as Progress } from "./Progress.svelte";
 export { default as SelectMenu } from "./SelectMenu";

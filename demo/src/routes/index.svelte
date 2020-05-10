@@ -1,5 +1,6 @@
 <script>
   import {
+    Pagination,
     BranchName,
     Autocomplete,
     Form,
@@ -44,6 +45,21 @@
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
+
+<Pagination.Pagination>
+  <Pagination.Button kind="previous" />
+  <Pagination.Button kind="next" />
+</Pagination.Pagination>
+
+<Pagination.Pagination>
+  <Pagination.Button kind="previous" disabled />
+  <em aria-current="page">1</em>
+  <a href="#url" aria-label="Page 2">2</a>
+  <span class="gap">…</span>
+  <a href="#url" aria-label="Page 9">9</a>
+  <a href="#url" aria-label="Page 10">10</a>
+  <Pagination.Button kind="next" />
+</Pagination.Pagination>
 
 <Blankslate size="spacious" large bordered capped>
   <h3 class="mb-1">You don’t seem to have any pull requests.</h3>
