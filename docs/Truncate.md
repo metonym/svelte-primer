@@ -10,7 +10,7 @@ import { Truncate } from "svelte-primer";
 
 ## Usage
 
-```js
+```jsx
 <Truncate title="branch-name-that-is-really-long">
   branch-name-that-is-really-long
 </Truncate>
@@ -24,7 +24,7 @@ import { Truncate } from "svelte-primer";
 | :---- | :-------- | :------ |
 | fixed | `boolean` | `false` |
 
-### \$\$restProps
+### `$$restProps`
 
 Forwarded to the top-level `div` element.
 
@@ -45,5 +45,7 @@ None.
 ## Kitchen Sink Shorthand Notation
 
 ```jsx
-<Truncate fixed={true}>{/* <slot /> */}</Truncate>
+<Truncate fixed={true}>
+  <slot />
+</Truncate>
 ```
