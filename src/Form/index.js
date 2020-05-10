@@ -8,7 +8,7 @@ import FormRadioGroup from "./FormRadioGroup.svelte";
 import FormSelect from "./FormSelect.svelte";
 import FormTextArea from "./FormTextArea.svelte";
 
-const Form = {
+export default {
   Actions: FormActions,
   Checkbox: FormCheckbox,
   Form: FormForm,
@@ -19,5 +19,3 @@ const Form = {
   Select: FormSelect,
   TextArea: FormTextArea,
 };
-
-export default Form;

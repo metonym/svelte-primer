@@ -8,7 +8,7 @@ import RowLink from "./BoxRowLink.svelte";
 import Rows from "./BoxRows.svelte";
 import Title from "./BoxTitle.svelte";
 
-const _Box = {
+export default {
   Body,
   Box,
   Footer,
@@ -19,5 +19,3 @@ const _Box = {
   Rows,
   Title,
 };
-
-export default _Box;

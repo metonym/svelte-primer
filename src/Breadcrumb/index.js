@@ -1,9 +1,7 @@
 import Breadcrumb from "./Breadcrumb.svelte";
 import Item from "./BreadcrumbItem.svelte";
 
-const _Breadcrumb = {
+export default {
   Breadcrumb,
   Item,
 };
-
-export default _Breadcrumb;

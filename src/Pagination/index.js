@@ -1,9 +1,7 @@
 import Pagination from "./Pagination.svelte";
 import Button from "./PaginationButton.svelte";
 
-const _Pagination = {
+export default {
   Pagination,
   Button,
 };
-
-export default _Pagination;

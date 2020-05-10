@@ -3,11 +3,9 @@ import Dropdown from "./Dropdown.svelte";
 import Header from "./DropdownHeader.svelte";
 import Item from "./DropdownItem.svelte";
 
-const _Dropdown = {
+export default {
   Divider,
   Dropdown,
   Header,
   Item,
 };
-
-export default _Dropdown;

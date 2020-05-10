@@ -1,9 +1,7 @@
 import Popover from "./Popover.svelte";
 import Message from "./PopoverMessage.svelte";
 
-const _Popover = {
+export default {
   Popover,
   Message,
 };
-
-export default _Popover;

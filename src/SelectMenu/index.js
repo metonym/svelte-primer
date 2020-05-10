@@ -10,7 +10,7 @@ import Tab from "./SelectMenuTab.svelte";
 import Tabs from "./SelectMenuTabs.svelte";
 import Title from "./SelectMenuTitle.svelte";
 
-const _SelectMenu = {
+export default {
   BlankSlate,
   Divider,
   Filter,
@@ -23,5 +23,3 @@ const _SelectMenu = {
   Tabs,
   Title,
 };
-
-export default _SelectMenu;

@@ -13,7 +13,7 @@ import Underline from "./Underline.svelte";
 import UnderlineItem from "./UnderlineItem.svelte";
 import UnderlineOcticon from "./UnderlineOcticon.svelte";
 
-const Navigation = {
+export default {
   FilterList,
   FilterListItem,
   Menu,
@@ -29,5 +29,3 @@ const Navigation = {
   UnderlineItem,
   UnderlineOcticon,
 };
-
-export default Navigation;
