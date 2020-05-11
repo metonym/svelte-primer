@@ -12,6 +12,8 @@
   ]
     .filter(Boolean)
     .join(' ')}
-  style={[!$$restProps.style && fixed && 'max-width: 125px', $$restProps.style].join(';')}>
+  style={[!$$restProps.style && fixed && 'max-width: 125px', $$restProps.style]
+    .filter(Boolean)
+    .join(';')}>
   <slot />
 </div>

@@ -8,7 +8,7 @@
 </script>
 
 {#if bordered}
-  <Box class={[capped && 'rounded-top-0'].join('')}>
+  <Box class={[capped && 'rounded-top-0'].filter(Boolean).join('')}>
     <div
       {...$$restProps}
       class:blankslate={true}

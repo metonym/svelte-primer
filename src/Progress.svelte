@@ -30,7 +30,9 @@
   ]
     .filter(Boolean)
     .join(' ')}
-  style={[inline && 'max-width: 160px;', $$restProps.style].join(';')}>
+  style={[inline && 'max-width: 160px;', $$restProps.style]
+    .filter(Boolean)
+    .join(';')}>
   <slot>
     <span class="bg-green" style="width: {progress}%;" />
   </slot>
