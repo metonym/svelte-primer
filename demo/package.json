@@ -7,13 +7,16 @@
     "deploy": "node gh-pages"
   },
   "dependencies": {
-    "polka": "next",
-    "sirv": "^0.4.0"
+    "polka": "next"
   },
   "devDependencies": {
     "@metonym/sapper": "^0.27.12",
     "gh-pages": "^2.2.0",
-    "svelte": "^3.0.0",
+    "marked": "^1.0.0",
+    "pretty-bytes": "^5.3.0",
+    "prism-svelte": "^0.4.6",
+    "prismjs": "^1.20.0",
+    "svelte": "^3.22.2",
     "svelte-loader": "^2.9.0",
     "svelte-primer": "../",
     "webpack": "^4.43.0"

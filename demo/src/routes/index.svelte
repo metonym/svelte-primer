@@ -1,4 +1,7 @@
 <script>
+  import { goto } from "@sapper/app";
+  import snapshot from "../../../.size-snapshot.json";
+  import prettyBytes from "pretty-bytes";
   import {
     Alert,
     Autocomplete,
@@ -43,24 +46,48 @@
     GitCommit
   } from "svelte-octicons";
 
+  export let copy = async () => {
+    await navigator.clipboard.writeText("<empty clipboard>");
+  };
+
   let open = false;
   let large = false;
   let value = "";
   let radioGroupValue = undefined;
   let selectValue = "Git";
+
+  console.log("gzip", prettyBytes(snapshot["lib/index.mjs"].gzipped));
 </script>
 
 <svelte:head>
   <title>svelte-primer</title>
 </svelte:head>
 
+<Blankslate size="spacious">
+  <h3 class="mb-1">svelte-primer</h3>
+  <p>Svelte implementation of the GitHub Primer design system</p>
+  <Button
+    kind="primary"
+    class="my-3"
+    on:click={() => {
+      goto('components/');
+    }}>
+    Get started
+  </Button>
+  <p>
+    <Button
+      variant="link-button"
+      href="https://github.com/metonym/svelte-primer">
+      View on GitHub
+    </Button>
+  </p>
+</Blankslate>
+<!-- 
+
 <Header.Header>
   <Header.Item>
-    <Header.Link href="#" class="f4 d-flex flex-items-center">
-      <MarkGithub
-        height="32"
-        width="32"
-        class="octicon octicon-mark-github mr-2" />
+    <Header.Link href="components/" class="f4 d-flex flex-items-center">
+      <MarkGithub width={32} height={32} class="mr-2" />
       <span>GitHub</span>
     </Header.Link>
   </Header.Item>
@@ -81,7 +108,11 @@
 
 <Pagination.Pagination>
   <Pagination.Button kind="previous" />
-  <Pagination.Button kind="next" />
+  <Pagination.Button
+    kind="next"
+    on:click={() => {
+      copy();
+    }} />
 </Pagination.Pagination>
 
 <Pagination.Pagination>
@@ -93,18 +124,6 @@
   <a href="#url" aria-label="Page 10">10</a>
   <Pagination.Button kind="next" />
 </Pagination.Pagination>
-
-<Blankslate size="spacious" large bordered capped>
-  <h3 class="mb-1">You don’t seem to have any pull requests.</h3>
-  <p>
-    Pull requests help you discuss potential changes before they are merged into
-    the base branch.
-  </p>
-  <Button kind="primary" class="my-3">New pull request</Button>
-  <p>
-    <Button variant="link-button">Learn more</Button>
-  </p>
-</Blankslate>
 
 <Form.Form>
   <Form.Checkbox type="radio" label="Not available for hire" name="hireme" />
@@ -457,3 +476,4 @@
 <div class="Subhead">
   <div class="Subhead-heading">Plain subhead</div>
 </div>
+ -->
