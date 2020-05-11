@@ -2358,10 +2358,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-octicons@^9.6.1:
-  version "9.6.1"
-  resolved "https://registry.yarnpkg.com/svelte-octicons/-/svelte-octicons-9.6.1.tgz#52c64b810b522db55deea75b8acc0b4446254396"
-  integrity sha512-/N1Dtr/9T4gqzEgWYJ0nDOcgPS6KeUatPQT+abqXTuP9jruoVAPfPCBnURFF+qX4tMViK3/+QRqOZ+i187L5wQ==
+svelte-octicons@^9.6.3:
+  version "9.6.3"
+  resolved "https://registry.yarnpkg.com/svelte-octicons/-/svelte-octicons-9.6.3.tgz#c326ffee5d58c8b92183fd58d2b9d038b6dc40ff"
+  integrity sha512-SAwijL58UDtqEOTe8Gsn2YnPy7UaXgQ6U4/HBnUZt2zNlpe7veeLyaQTOC4z+2HalsqELDHJGdXkXUpBJdJEpw==
 
 svelte@^3.20.x:
   version "3.20.1"

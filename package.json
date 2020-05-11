@@ -15,7 +15,7 @@
     "svelte": "^3.20.x"
   },
   "dependencies": {
-    "svelte-octicons": "^9.6.1"
+    "svelte-octicons": "^9.6.3"
   },
   "devDependencies": {
     "rollup": "^2.9.0",
