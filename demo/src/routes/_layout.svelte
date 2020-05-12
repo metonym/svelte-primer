@@ -23,7 +23,8 @@
 
 <Primer.Header.Header>
   <Primer.Header.Item>
-    <Primer.Header.Link href="/">
+    <Primer.Header.Link
+      href={process.env.NODE_ENV === 'development' ? '/' : '/svelte-primer/'}>
       <span class="f4">svelte-primer</span>
       <span class="f6 ml-1 text-gray-light">v{pkg.version}</span>
     </Primer.Header.Link>

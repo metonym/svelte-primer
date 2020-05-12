@@ -63,6 +63,12 @@
   <title>svelte-primer</title>
 </svelte:head>
 
+<div class="markdown-body">
+  <h1>svelte-primer</h1>
+  <p>Svelte implementation of the GitHub Primer design system</p>
+</div>
+
+<!--
 <Blankslate size="spacious">
   <h3 class="mb-1">svelte-primer</h3>
   <p>Svelte implementation of the GitHub Primer design system</p>
@@ -82,7 +88,7 @@
     </Button>
   </p>
 </Blankslate>
-<!-- 
+
 
 <Header.Header>
   <Header.Item>
