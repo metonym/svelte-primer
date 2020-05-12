@@ -15,6 +15,7 @@
   export let post;
 
   import { Box } from "svelte-primer";
+  import { LinkExternal } from "svelte-octicons";
   import Truncate from "./_components/Truncate.svelte";
   import { onMount, getContext } from "svelte";
 
@@ -27,9 +28,38 @@
       ctx.clear();
     };
   });
-
-  const components = { Truncate };
 </script>
+
+<style>
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .box-preview-link {
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1.5rem;
+  }
+
+  :global(.box-preview) {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  :global(.box-source) {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  :global(pre[class*="language-"]) {
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+</style>
 
 <svelte:head>
   <title>{post.title}</title>
@@ -40,8 +70,23 @@
 
 <div class="markdown-body">
   <h1>{post.title}</h1>
-  <Box.Box class="p-3 mt-4 mb-2">
-    <svelte:component this={components[post.title]} />
+  <Box.Box class="position-relative box-preview d-flex mt-4">
+    <a
+      class="box-preview-link"
+      href="/examples/{post.title}/"
+      target="_blank"
+      rel="noopener noreferrer">
+      View
+      <LinkExternal />
+    </a>
+    <iframe title={post.title} src="/examples/{post.title}/" class="border-0" />
+  </Box.Box>
+  <Box.Box class="box-source border-top-0 mb-2">
+    <pre class="language-svelte">
+      <code class="language-svelte">
+        {@html post.source}
+      </code>
+    </pre>
   </Box.Box>
   {@html post.html}
 </div>

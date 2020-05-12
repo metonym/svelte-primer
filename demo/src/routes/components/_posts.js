@@ -17,6 +17,11 @@ const file = fs.readFileSync(
   "utf8"
 );
 
+const sourceCode = fs.readFileSync(
+  path.resolve(process.cwd(), "./src/routes/examples/Truncate.svelte"),
+  "utf8"
+);
+
 const renderer = new marked.Renderer();
 
 renderer.blockquote = (text) => {
@@ -48,6 +53,7 @@ const posts = [
     title: "Truncate",
     slug: "Truncate",
     html: marked(file),
+    source: highlight(sourceCode, languages.svelte, "svelte"),
   },
 ];
 
