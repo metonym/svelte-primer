@@ -16,17 +16,18 @@
 
   import { Box } from "svelte-primer";
   import { LinkExternal } from "svelte-octicons";
-  import Truncate from "./_components/Truncate.svelte";
-  import { onMount, getContext } from "svelte";
+  import { onMount, afterUpdate, getContext } from "svelte";
 
   const ctx = getContext("Root");
 
   onMount(() => {
-    ctx.set(post.title);
-
     return () => {
       ctx.clear();
     };
+  });
+
+  afterUpdate(() => {
+    ctx.set(post.title);
   });
 </script>
 
@@ -73,13 +74,13 @@
   <Box.Box class="position-relative box-preview d-flex mt-4">
     <a
       class="box-preview-link"
-      href="/examples/{post.title}/"
+      href="examples/{post.title}"
       target="_blank"
       rel="noopener noreferrer">
       View
       <LinkExternal />
     </a>
-    <iframe title={post.title} src="/examples/{post.title}/" class="border-0" />
+    <iframe title={post.title} src="examples/{post.title}" class="border-0" />
   </Box.Box>
   <Box.Box class="box-source border-top-0 mb-2">
     <pre class="language-svelte">
