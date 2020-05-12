@@ -49,7 +49,7 @@
       {/each}
     </Primer.Navigation.SideNav>
   </aside>
-  <main class="overflow-x-auto p-6">
+  <div class="d-table table-fixed width-full p-6" style="max-width: 740px">
     <slot />
-  </main>
+  </div>
 </div>

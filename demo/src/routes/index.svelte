@@ -65,7 +65,11 @@
 
 <div class="markdown-body">
   <h1>svelte-primer</h1>
-  <p>Svelte implementation of the GitHub Primer design system</p>
+  <p>
+    Svelte implementation of the
+    <a href="https://primer.style/css/">GitHub Primer</a>
+    design system
+  </p>
 </div>
 
 <!--
