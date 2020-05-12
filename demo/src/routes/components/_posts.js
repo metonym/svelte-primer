@@ -1,26 +1,8 @@
-// Ordinarily, you'd generate this data from markdown files in your
-// repo, or fetch them from a database of some kind. But in order to
-// avoid unnecessary dependencies in the starter template, and in the
-// service of obviousness, we're just going to leave it here.
-
-// This file is called `_posts.js` rather than `posts.js`, because
-// we don't want to create an `/blog/posts` route — the leading
-// underscore tells Sapper not to do that.
 import marked from "marked";
 import fs from "fs";
 import path from "path";
 import { highlight, languages } from "prismjs";
 import "prism-svelte";
-
-const file = fs.readFileSync(
-  path.resolve(process.cwd(), "../docs/Truncate.md"),
-  "utf8"
-);
-
-const sourceCode = fs.readFileSync(
-  path.resolve(process.cwd(), "./src/routes/examples/Truncate.svelte"),
-  "utf8"
-);
 
 const renderer = new marked.Renderer();
 
@@ -48,17 +30,26 @@ renderer.code = (code, language) => {
 
 marked.setOptions({ renderer });
 
-const posts = [
-  {
-    title: "Truncate",
-    slug: "Truncate",
-    html: marked(file),
-    source: highlight(sourceCode, languages.svelte, "svelte"),
-  },
-];
+const posts = fs
+  .readdirSync(path.resolve(process.cwd(), "../docs"))
+  .map((fileName) => {
+    const file = fs.readFileSync(
+      path.resolve(process.cwd(), "../docs", fileName),
+      "utf8"
+    );
 
-posts.forEach((post) => {
-  post.html = post.html.replace(/^\t{3}/gm, "");
-});
+    const title = fileName.replace(".md", "");
+    const sourceCode = fs.readFileSync(
+      path.resolve(process.cwd(), "./src/routes/examples/", `${title}.svelte`),
+      "utf8"
+    );
+
+    return {
+      title,
+      slug: title,
+      html: marked(file),
+      source: highlight(sourceCode, languages.svelte, "svelte"),
+    };
+  });
 
 export default posts;

@@ -30,9 +30,7 @@ import { BranchName } from "svelte-primer";
 | :--- | :------- | :---------- |
 | href | `string` | `undefined` |
 
-### `$$restProps`
-
-Forwarded to the top-level element.
+`$$restProps` are passed to the top-level element.
 
 ### Slots
 

@@ -22,9 +22,7 @@
 | :---- | :-------- | :------ |
 | fixed | `boolean` | `false` |
 
-### `$$restProps`
-
-Forwarded to the top-level `div` element.
+`$$restProps` are passed to the top-level `div` element.
 
 ### Slots
 
