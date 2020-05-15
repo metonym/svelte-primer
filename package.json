@@ -18,6 +18,7 @@
     "svelte-octicons": "^9.6.3"
   },
   "devDependencies": {
+    "purgecss-webpack-plugin": "^2.2.0",
     "rollup": "^2.9.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-size-snapshot": "^0.11.0",
