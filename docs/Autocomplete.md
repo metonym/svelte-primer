@@ -1,6 +1,6 @@
 # Autocomplete
 
-> [Source code](../src/Autocomplete.svelte)
+> [Source code](../src/Autocomplete)
 
 ## Usage
 
@@ -82,7 +82,7 @@ None.
 #### Component Signature
 
 ```jsx
-<Autocomplete.Item selected={true}>
+<Autocomplete.Item {selected}>
   <slot />
 </Autocomplete.Item>
 ```

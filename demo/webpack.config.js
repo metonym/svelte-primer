@@ -49,23 +49,24 @@ module.exports = {
     plugins: [
       new MiniCssExtractPlugin({ filename: "[name].[chunkhash:8].css" }),
       new OptimizeCssAssetsPlugin({}),
-      new PurgecssPlugin({
-        paths: glob.sync(`${path.join(__dirname, "src")}/**/*`, {
-          nodir: true,
+      false &&
+        new PurgecssPlugin({
+          paths: glob.sync(`${path.join(__dirname, "src")}/**/*`, {
+            nodir: true,
+          }),
+          whitelistPatternsChildren: () => {
+            return [
+              /^Header-/,
+              /^SideNav-/,
+              /^btn-/,
+              /^Box-/,
+              /^markdown-/,
+              /^table/,
+            ];
+          },
+          fontFace: true,
+          keyframes: true,
         }),
-        whitelistPatternsChildren: () => {
-          return [
-            /^Header-/,
-            /^SideNav-/,
-            /^btn-/,
-            /^Box-/,
-            /^markdown-/,
-            /^table/,
-          ];
-        },
-        fontFace: true,
-        keyframes: true,
-      }),
       // pending https://github.com/sveltejs/svelte/issues/2377
       // dev && new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin({
