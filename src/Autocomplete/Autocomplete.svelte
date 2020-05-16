@@ -6,8 +6,8 @@
 
 <div class:position-relative={true}>
   <Input
-    class="input-block"
     {...$$restProps}
+    block={true}
     bind:value
     on:input
     on:change
