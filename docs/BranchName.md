@@ -44,11 +44,11 @@ import { BranchName } from "svelte-primer";
 | :------- | :---------- |
 | on:click | `undefined` |
 
-### Lifecycle Events
+### Dispatched Events
 
 None.
 
-## Component Signature
+### Component Signature
 
 ```jsx
 <BranchName href="#">

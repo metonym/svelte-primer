@@ -34,11 +34,11 @@
 
 None.
 
-### Lifecycle Events
+### Dispatched Events
 
 None.
 
-## Component Signature
+### Component Signature
 
 ```jsx
 <Truncate fixed={true}>
