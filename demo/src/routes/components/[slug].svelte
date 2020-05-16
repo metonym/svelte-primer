@@ -32,7 +32,8 @@
 
   $: minHeight = {
     Alert: "20rem",
-    BoxOverlay: "16rem"
+    BoxOverlay: "16rem",
+    Toast: "21rem"
   };
 </script>
 

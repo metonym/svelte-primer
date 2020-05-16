@@ -2,13 +2,15 @@
 
 > [Source code](../src/Autocomplete)
 
+## Import
+
+```js
+import { Autocomplete } from "svelte-primer";
+```
+
 ## Usage
 
-```html
-<script>
-  import { Autocomplete } from "svelte-primer";
-</script>
-
+```jsx
 <Autocomplete.Autocomplete aria-label="Search" placeholder="Search">
   <Autocomplete.Item selected>Option 1</Autocomplete.Item>
   <Autocomplete.Item>Option 2</Autocomplete.Item>

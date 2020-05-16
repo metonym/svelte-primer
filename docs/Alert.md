@@ -2,13 +2,15 @@
 
 > [Source code](../src/Alert.svelte)
 
+## Import
+
+```js
+import { Alert } from "svelte-primer";
+```
+
 ## Usage
 
-```html
-<script>
-  import { Alert } from "svelte-primer";
-</script>
-
+```jsx
 <Alert>Flash message goes here.</Alert>
 ```
 

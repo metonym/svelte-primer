@@ -68,18 +68,9 @@
   <p>
     Svelte implementation of the
     <a href="https://primer.style/css/">GitHub Primer</a>
-    design system
+    design system.
   </p>
 </div>
-
-<Tooltip
-  direction="se"
-  text="This is the tooltip with multiple lines. This is the tooltip with
-  multiple lines."
-  align="left"
-  noDelay>
-  Item
-</Tooltip>
 
 <!--
 <Blankslate size="spacious">

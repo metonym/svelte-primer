@@ -3,8 +3,6 @@ const path = require("path");
 const config = require("@metonym/sapper/config/webpack.js");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const glob = require("glob");
-const PurgecssPlugin = require("purgecss-webpack-plugin");
 const pkg = require("./package.json");
 
 const mode = process.env.NODE_ENV || "production";
@@ -32,7 +30,7 @@ module.exports = {
               dev,
               immutable: true,
               hydratable: true,
-              hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
+              hotReload: false,
             },
           },
         },
@@ -49,26 +47,6 @@ module.exports = {
     plugins: [
       new MiniCssExtractPlugin({ filename: "[name].[chunkhash:8].css" }),
       new OptimizeCssAssetsPlugin({}),
-      false &&
-        new PurgecssPlugin({
-          paths: glob.sync(`${path.join(__dirname, "src")}/**/*`, {
-            nodir: true,
-          }),
-          whitelistPatternsChildren: () => {
-            return [
-              /^Header-/,
-              /^SideNav-/,
-              /^btn-/,
-              /^Box-/,
-              /^markdown-/,
-              /^table/,
-            ];
-          },
-          fontFace: true,
-          keyframes: true,
-        }),
-      // pending https://github.com/sveltejs/svelte/issues/2377
-      // dev && new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin({
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode),

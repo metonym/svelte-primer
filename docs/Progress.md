@@ -2,13 +2,15 @@
 
 > [Source code](../src/Progress.svelte)
 
+## Import
+
+```js
+import { Progress } from "svelte-primer";
+```
+
 ## Usage
 
-```html
-<script>
-  import { Progress } from "svelte-primer";
-</script>
-
+```jsx
 <Progress />
 ```
 

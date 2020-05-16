@@ -2,13 +2,15 @@
 
 > [Source code](../src/Loader.svelte)
 
+## Import
+
+```js
+import { Loader } from "svelte-primer";
+```
+
 ## Usage
 
-```html
-<script>
-  import { Loader } from "svelte-primer";
-</script>
-
+```jsx
 <Loader />
 ```
 

@@ -2,13 +2,15 @@
 
 > [Source code](../src/Truncate.svelte)
 
+## Import
+
+```js
+import { Truncate } from "svelte-primer";
+```
+
 ## Usage
 
-```html
-<script>
-  import { Truncate } from "svelte-primer";
-</script>
-
+```jsx
 <Truncate title="branch-name-that-is-really-long">
   branch-name-that-is-really-long
 </Truncate>

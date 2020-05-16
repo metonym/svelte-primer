@@ -11,7 +11,7 @@ import { Avatar } from "svelte-primer";
 ## Usage
 
 ```jsx
-<Avatar alt="jonrohan" src="https://github.com/jonrohan.png?v=3&s=96" />
+<Avatar alt="jonrohan" src="https://github.com/jonrohan.png" />
 ```
 
 ## API
@@ -49,5 +49,5 @@ None
   child={Boolean}
   width={Number}
   height={Number}
-></Avatar>
+/>
 ```
