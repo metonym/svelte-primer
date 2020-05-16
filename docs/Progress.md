@@ -42,7 +42,7 @@ None.
 ### Component Signature
 
 ```jsx
-<Progress progress={Number} {small|large} {inline}>
+<Progress progress={Number} small={Boolean} large={Boolean} inline={Boolean}>
   <slot />
 </Progress>
 ```

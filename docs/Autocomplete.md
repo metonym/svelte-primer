@@ -82,7 +82,7 @@ None.
 #### Component Signature
 
 ```jsx
-<Autocomplete.Item {selected}>
+<Autocomplete.Item selected={Boolean}>
   <slot />
 </Autocomplete.Item>
 ```

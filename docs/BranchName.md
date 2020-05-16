@@ -51,7 +51,7 @@ None.
 ### Component Signature
 
 ```jsx
-<BranchName {href}>
+<BranchName href={String}>
   <slot />
 </BranchName>
 ```

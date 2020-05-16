@@ -41,7 +41,7 @@ None.
 ### Component Signature
 
 ```jsx
-<Truncate {fixed}>
+<Truncate fixed={Boolean}>
   <slot />
 </Truncate>
 ```

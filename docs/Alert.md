@@ -43,11 +43,11 @@ None.
 
 ```jsx
 <Alert
-  {full}
-  {banner}
-  {kind}
-  {dismissable}
-  on:dismiss=""
+  full={Boolean}
+  banner={Boolean}
+  kind={"success" | "warn" | "error"}
+  dismissable={Boolean}
+  on:dismiss="{() => {}}"
 >
   <slot />
 </Alert>
