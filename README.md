@@ -7,6 +7,8 @@
 
 This component library implements [Primer CSS components](https://primer.style/css/components).
 
+[Documentation](docs)
+
 ## Not supported
 
 - [Popover directions](https://primer.style/css/components/popover)
