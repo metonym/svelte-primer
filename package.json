@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "purgecss-webpack-plugin": "^2.2.0",
-    "rollup": "^2.9.1",
+    "rollup": "^2.10.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-size-snapshot": "^0.11.0",
     "rollup-plugin-svelte": "^5.2.1",
