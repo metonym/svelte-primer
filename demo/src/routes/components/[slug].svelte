@@ -29,6 +29,11 @@
   afterUpdate(() => {
     ctx.set(post.title);
   });
+
+  $: minHeight = {
+    Alert: "20rem",
+    BoxOverlay: "16rem"
+  };
 </script>
 
 <style>
@@ -64,14 +69,11 @@
 
 <svelte:head>
   <title>{post.title}</title>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/prism-themes@1.4.0/themes/prism-duotone-sea.css" />
 </svelte:head>
 
 <div class="markdown-body">
   <h1>{post.title}</h1>
-  <Box.Box class="position-relative box-preview d-flex mt-4">
+  <Box.Box class="position-relative box-preview d-flex mt-4 border-bottom-0">
     <a
       class="box-preview-link"
       href="examples/{post.title}"
@@ -80,7 +82,11 @@
       View
       <LinkExternal />
     </a>
-    <iframe title={post.title} src="examples/{post.title}" class="border-0" />
+    <iframe
+      title={post.title}
+      style="min-height: {minHeight[post.title] || 0}"
+      src="examples/{post.title}"
+      class="border-0" />
   </Box.Box>
   <Box.Box class="box-source border-top-0 mb-2">
     <pre class="language-svelte">

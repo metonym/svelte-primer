@@ -44,7 +44,6 @@
   {#if dismissable}
     <button
       class="Toast-dismissButton"
-      on:click
       on:click={() => {
         dispatch('dismiss');
       }}>

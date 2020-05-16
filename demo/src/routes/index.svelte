@@ -72,6 +72,15 @@
   </p>
 </div>
 
+<Tooltip
+  direction="se"
+  text="This is the tooltip with multiple lines. This is the tooltip with
+  multiple lines."
+  align="left"
+  noDelay>
+  Item
+</Tooltip>
+
 <!--
 <Blankslate size="spacious">
   <h3 class="mb-1">svelte-primer</h3>

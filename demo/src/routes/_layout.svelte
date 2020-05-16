@@ -117,7 +117,7 @@
         <h5 class="text-gray mb-2 pb-1 border-bottom">Components</h5>
         {#each components as component, i (component)}
           <Primer.Navigation.SideNavSubItem
-            href="components/{component}/"
+            href="components/{component}"
             on:click={() => {
               expanded = false;
             }}

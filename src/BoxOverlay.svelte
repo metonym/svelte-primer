@@ -17,14 +17,14 @@
 <style>
   details-dialog {
     position: fixed;
-    margin: 10vh auto;
+    z-index: 999;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-    max-height: 80vh;
-    max-width: 90vw;
     width: 440px;
+    max-width: 90vw;
+    max-height: 80vh;
+    margin: 10vh auto;
+    transform: translateX(-50%);
   }
 
   .Box-overlay--narrow {

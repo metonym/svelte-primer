@@ -32,6 +32,7 @@ marked.setOptions({ renderer });
 
 const posts = fs
   .readdirSync(path.resolve(process.cwd(), "../docs"))
+  .filter((fileName) => fileName !== "README.md")
   .map((fileName) => {
     const file = fs.readFileSync(
       path.resolve(process.cwd(), "../docs", fileName),

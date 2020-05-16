@@ -1,4 +1,4 @@
-# Branch Name
+# BranchName
 
 > [Source code](../src/BranchName.svelte)
 

@@ -16,12 +16,12 @@
 
 ### Props
 
-| Name        | Type                                   | Default     |
-| :---------- | :------------------------------------- | :---------- |
-| full        | `boolean`                              | `false`     |
-| banner      | `boolean`                              | `false`     |
-| kind        | `success` &#124; `warn` &#124; `error` | `undefined` |
-| dismissable | `boolean`                              | `false`     |
+| Name        | Type                                                            | Default     |
+| :---------- | :-------------------------------------------------------------- | :---------- |
+| full        | `boolean`                                                       | `false`     |
+| banner      | `boolean`                                                       | `false`     |
+| kind        | `undefined` &#124; `"success"` &#124; `"warn"` &#124; `"error"` | `undefined` |
+| dismissable | `boolean`                                                       | `false`     |
 
 `$$restProps` are passed to the top-level `div` element.
 
@@ -45,7 +45,7 @@ None.
 <Alert
   full={Boolean}
   banner={Boolean}
-  kind={"success" | "warn" | "error"}
+  kind={undefined | "success" | "warn" | "error"}
   dismissable={Boolean}
   on:dismiss="{() => {}}"
 >

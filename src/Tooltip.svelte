@@ -1,6 +1,6 @@
 <script>
-  export let direction = "n"; // 'n' | 'ne' | 'e' | 'se' | 's' | 'sw' | 'w' | 'nw'
   export let text = "Tooltip text";
+  export let direction = "n"; // 'n' | 'ne' | 'e' | 'se' | 's' | 'sw' | 'w' | 'nw'
   export let align = undefined; // 'left' | 'right'
   export let alignIndent = 1; // 1 | 2
   export let noDelay = false;
