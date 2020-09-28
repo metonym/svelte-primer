@@ -9,16 +9,17 @@
 
 <span
   {...$$restProps}
-  aria-label={text}
-  class={[
+  aria-label="{text}"
+  class="{[
     'tooltipped',
     `tooltipped-${direction}`,
     align && `tooltipped-align-${align}-${alignIndent}`,
     noDelay && 'tooltipped-no-delay',
     multiline && 'tooltipped-multiline',
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}>
+    .join(' ')}"
+>
   <slot />
 </span>

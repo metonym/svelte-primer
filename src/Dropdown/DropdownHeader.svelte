@@ -1,3 +1,3 @@
-<div {...$$restProps} class:dropdown-header={true}>
+<div {...$$restProps} class:dropdown-header="{true}">
   <slot />
 </div>

@@ -7,5 +7,6 @@
     {...$$restProps}
     class="SelectMenu-input form-control"
     type="text"
-    bind:value />
+    bind:value
+  />
 </form>

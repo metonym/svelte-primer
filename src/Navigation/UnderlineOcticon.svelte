@@ -3,6 +3,7 @@
 </script>
 
 <svelte:component
-  this={octicon}
+  this="{octicon}"
   {...$$restProps}
-  class="UnderlineNav-octicon" />
+  class="UnderlineNav-octicon"
+/>

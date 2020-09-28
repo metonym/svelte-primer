@@ -3,7 +3,7 @@
 </script>
 
 <li>
-  <a {...$$restProps} class:dropdown-item={true} {href} on:click>
+  <a {...$$restProps} class:dropdown-item="{true}" href="{href}" on:click>
     <slot />
   </a>
 </li>

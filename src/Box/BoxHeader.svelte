@@ -4,7 +4,8 @@
 
 <div
   {...$$restProps}
-  class:Box-header={true}
-  class:Box-header--blue={theme === 'blue'}>
+  class:Box-header="{true}"
+  class:Box-header--blue="{theme === 'blue'}"
+>
   <slot />
 </div>

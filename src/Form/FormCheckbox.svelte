@@ -12,20 +12,19 @@
     <label aria-live="polite">
       <input
         {...$$restProps}
-        {type}
+        type="{type}"
         checked
-        aria-describedby={id}
+        aria-describedby="{id}"
         on:focus
         on:blur
         on:keydown
         on:keyup
-        on:change={() => {
+        on:change="{() => {
           checked = !checked;
-        }}
-        class:form-checkbox-details-trigger={true} />
-      {#if emphasis}
-        <em class="highlight">{label}</em>
-      {:else}{label}{/if}
+        }}"
+        class:form-checkbox-details-trigger="{true}"
+      />
+      {#if emphasis}<em class="highlight">{label}</em>{:else}{label}{/if}
       <span class="form-checkbox-details text-normal">
         <slot />
       </span>
@@ -34,20 +33,19 @@
     <label>
       <input
         {...$$restProps}
-        {type}
+        type="{type}"
         checked
-        aria-describedby={id}
+        aria-describedby="{id}"
         on:focus
         on:blur
         on:keydown
         on:keyup
-        on:change={() => {
+        on:change="{() => {
           checked = !checked;
-        }} />
-      {#if emphasis}
-        <em class="highlight">{label}</em>
-      {:else}{label}{/if}
+        }}"
+      />
+      {#if emphasis}<em class="highlight">{label}</em>{:else}{label}{/if}
     </label>
-    <slot props={{ id, class: 'note' }} />
+    <slot props="{{ id, class: 'note' }}" />
   {/if}
 </div>

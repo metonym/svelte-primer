@@ -8,7 +8,7 @@
     "aria-label": disabled ? undefined : `${capitalized} page`,
     class: `${kind}_page`,
     rel: kind,
-    href
+    href,
   };
 </script>
 

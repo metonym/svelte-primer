@@ -12,23 +12,24 @@
 
 <input
   {...$$restProps}
-  class:form-control={true}
-  class:input-sm={size === 'small'}
-  class:input-lg={size === 'large'}
-  class:input-contrast={contrast}
-  class:input-block={block}
-  class:input-dark={dark}
-  class:input-hide-webkit-autofill={hideWebkitAutofill}
-  {type}
-  {placeholder}
-  {value}
-  aria-label={placeholder}
+  class:form-control="{true}"
+  class:input-sm="{size === 'small'}"
+  class:input-lg="{size === 'large'}"
+  class:input-contrast="{contrast}"
+  class:input-block="{block}"
+  class:input-dark="{dark}"
+  class:input-hide-webkit-autofill="{hideWebkitAutofill}"
+  type="{type}"
+  placeholder="{placeholder}"
+  value="{value}"
+  aria-label="{placeholder}"
   on:input
-  on:input={({ target }) => {
+  on:input="{({ target }) => {
     value = target.value;
-  }}
+  }}"
   on:change
   on:focus
   on:blur
   on:keydown
-  on:keyup />
+  on:keyup
+/>

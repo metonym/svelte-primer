@@ -5,6 +5,6 @@
   $: props = { "aria-current": current ? "page" : undefined };
 </script>
 
-<a {...$$restProps} {...props} class:menu-item={true} {href} on:click>
+<a {...$$restProps} {...props} class:menu-item="{true}" href="{href}" on:click>
   <slot />
 </a>

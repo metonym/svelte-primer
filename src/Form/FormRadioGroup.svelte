@@ -12,14 +12,16 @@
     <input
       {...$$restProps}
       type="radio"
-      class:radio-input={true}
-      id={option.id || option.value.toLowerCase().replace(/\s+/g, '-')}
-      bind:group={value}
-      value={option.value}
-      checked={value === option.value} />
+      class:radio-input="{true}"
+      id="{option.id || option.value.toLowerCase().replace(/\s+/g, '-')}"
+      bind:group="{value}"
+      value="{option.value}"
+      checked="{value === option.value}"
+    />
     <label
       class="radio-label"
-      for={option.id || option.value.toLowerCase().replace(/\s+/g, '-')}>
+      for="{option.id || option.value.toLowerCase().replace(/\s+/g, '-')}"
+    >
       {option.value}
     </label>
   {/each}

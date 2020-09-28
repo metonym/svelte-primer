@@ -6,16 +6,17 @@
 
 <span
   {...$$restProps}
-  class={[
+  class="{[
     'Label',
     outline && 'Label--outline',
     outline && color === 'green' && 'Label--outline-green',
     !outline && `bg-${color}`,
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}
-  {title}
-  on:click>
+    .join(' ')}"
+  title="{title}"
+  on:click
+>
   <slot />
 </span>

@@ -6,10 +6,11 @@
 
 <button
   {...$$restProps}
-  class:SelectMenu-item={true}
-  role={selected ? 'menuitemcheckbox' : 'menuitem'}
-  aria-checked={selected}
-  on:click>
+  class:SelectMenu-item="{true}"
+  role="{selected ? 'menuitemcheckbox' : 'menuitem'}"
+  aria-checked="{selected}"
+  on:click
+>
   {#if selected}
     <Check />
   {/if}

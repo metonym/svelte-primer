@@ -5,24 +5,26 @@
 </script>
 
 <details
-  class={[
+  class="{[
     'dropdown details-reset details-overlay d-inline-block',
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}>
+    .join(' ')}"
+>
   <summary class="btn" aria-haspopup="true">
     {title}
-    <div class="dropdown-caret" />
+    <div class="dropdown-caret"></div>
   </summary>
   <ul
-    class={[
+    class="{[
       'dropdown-menu',
       `dropdown-menu-${direction}`,
-      dark && 'dropdown-menu-dark'
+      dark && 'dropdown-menu-dark',
     ]
       .filter(Boolean)
-      .join(' ')}>
+      .join(' ')}"
+  >
     <slot />
   </ul>
 </details>

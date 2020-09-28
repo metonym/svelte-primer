@@ -6,15 +6,16 @@
 
 <select
   {...$$restProps}
-  class:form-select={true}
-  class:select-sm={small}
+  class:form-select="{true}"
+  class:select-sm="{small}"
   bind:value
   on:change
   on:focus
   on:blur
   on:keydown
-  on:keyup>
+  on:keyup
+>
   {#each options as option, i (option.value)}
-    <option value={option.value}>{option.value}</option>
+    <option value="{option.value}">{option.value}</option>
   {/each}
 </select>

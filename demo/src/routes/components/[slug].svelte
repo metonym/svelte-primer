@@ -33,7 +33,7 @@
   $: minHeight = {
     Alert: "20rem",
     BoxOverlay: "16rem",
-    Toast: "21rem"
+    Toast: "21rem",
   };
 </script>
 
@@ -79,19 +79,23 @@
       class="box-preview-link"
       href="examples/{post.title}"
       target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       View
       <LinkExternal />
     </a>
     <iframe
-      title={post.title}
+      title="{post.title}"
       style="min-height: {minHeight[post.title] || 0}"
       src="examples/{post.title}"
-      class="border-0" />
+      class="border-0"
+    ></iframe>
   </Box.Box>
   <Box.Box class="box-source border-top-0 mb-2">
     <pre class="language-svelte">
-      <code class="language-svelte">
+      <code
+        class="language-svelte"
+      >
         {@html post.source}
       </code>
     </pre>

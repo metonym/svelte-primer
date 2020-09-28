@@ -16,8 +16,8 @@
    */
 </script>
 
-<div {...$$restProps} class:pagehead={true}>
-  <slot name="actions" props={{ class: 'pagehead-actions' }} />
+<div {...$$restProps} class:pagehead="{true}">
+  <slot name="actions" props="{{ class: 'pagehead-actions' }}" />
   <h1>
     <slot />
   </h1>

@@ -1,3 +1,3 @@
-<ul {...$$restProps} class:filter-list={true}>
+<ul {...$$restProps} class:filter-list="{true}">
   <slot />
 </ul>

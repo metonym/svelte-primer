@@ -4,17 +4,19 @@
   "license": "MIT",
   "description": "Svelte implementation of the GitHub Primer design system",
   "author": "Eric Liu (https://github.com/metonym)",
-  "svelte": "src/index.js",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
+  "svelte": "./src/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
   "sideEffects": false,
   "scripts": {
-    "prepack": "rollup -c"
+    "prepack": "prettier --write '*/**/*.svelte' && rollup -c"
   },
   "dependencies": {
     "svelte-octicons": "^9.6.3"
   },
   "devDependencies": {
+    "prettier": "^2.1.2",
+    "prettier-plugin-svelte": "^1.4.0",
     "rollup": "^2.28.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^6.0.1",
@@ -39,5 +41,9 @@
   "files": [
     "lib",
     "src"
-  ]
+  ],
+  "prettier": {
+    "svelteStrictMode": true,
+    "svelteBracketNewLine": true
+  }
 }

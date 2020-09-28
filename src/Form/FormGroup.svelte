@@ -7,15 +7,14 @@
 
 <div
   {...$$restProps}
-  class:form-group={true}
-  class:successed={validation === 'success'}
-  class:errored={validation === 'error'}
-  class:warn={validation === 'warning'}>
-  <div class="form-group-header">
-    <label for={id}>{label}</label>
-  </div>
+  class:form-group="{true}"
+  class:successed="{validation === 'success'}"
+  class:errored="{validation === 'error'}"
+  class:warn="{validation === 'warning'}"
+>
+  <div class="form-group-header"><label for="{id}">{label}</label></div>
   <div class="form-group-body">
-    <slot props={{ id }} />
+    <slot props="{{ id }}" />
   </div>
   {#if validation}
     <p class="note {validation}">{validationText}</p>

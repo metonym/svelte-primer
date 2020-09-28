@@ -6,14 +6,15 @@
 {#if current}
   <li
     {...$$restProps}
-    class:breadcrumb-item={true}
+    class:breadcrumb-item="{true}"
     aria-current="page"
-    on:click>
+    on:click
+  >
     <slot />
   </li>
 {:else}
-  <li class:breadcrumb-item={true}>
-    <a {...$$restProps} {href} on:click>
+  <li class:breadcrumb-item="{true}">
+    <a {...$$restProps} href="{href}" on:click>
       <slot />
     </a>
   </li>

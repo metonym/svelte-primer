@@ -7,9 +7,9 @@
   import X from "svelte-octicons/lib/X";
 </script>
 
-<details class="details-reset details-overlay" {open}>
+<details class="details-reset details-overlay" open="{open}">
   <summary class="btn" aria-haspopup="true">{summary}</summary>
-  <div class="SelectMenu" class:right-0={align === 'right'}>
+  <div class="SelectMenu" class:right-0="{align === 'right'}">
     <div class="SelectMenu-modal">
       <header class="SelectMenu-header">
         <slot name="title">

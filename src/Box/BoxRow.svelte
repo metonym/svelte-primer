@@ -5,13 +5,14 @@
 
 <li
   {...$$restProps}
-  class={[
+  class="{[
     'Box-row',
     theme && `Box-row--${theme}`,
     unread && 'Box-row--unread',
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}>
+    .join(' ')}"
+>
   <slot />
 </li>

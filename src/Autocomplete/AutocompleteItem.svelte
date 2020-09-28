@@ -4,8 +4,9 @@
 
 <li
   {...$$restProps}
-  class:autocomplete-item={true}
-  aria-selected={selected}
-  on:click>
+  class:autocomplete-item="{true}"
+  aria-selected="{selected}"
+  on:click
+>
   <slot />
 </li>

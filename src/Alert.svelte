@@ -12,19 +12,21 @@
 
 <div
   {...$$restProps}
-  class:flash={true}
-  class:flash-full={full}
-  class:flash-banner={banner}
-  class:flash-success={kind === 'success'}
-  class:flash-warn={kind === 'warn'}
-  class:flash-error={kind === 'error'}>
+  class:flash="{true}"
+  class:flash-full="{full}"
+  class:flash-banner="{banner}"
+  class:flash-success="{kind === 'success'}"
+  class:flash-warn="{kind === 'warn'}"
+  class:flash-error="{kind === 'error'}"
+>
   {#if dismissable}
     <button
       class="flash-close js-flash-close"
       type="button"
-      on:click={() => {
+      on:click="{() => {
         dispatch('dismiss');
-      }}>
+      }}"
+    >
       <X aria-label="Close" role="img" />
     </button>
   {/if}

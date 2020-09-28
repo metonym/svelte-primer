@@ -5,6 +5,12 @@
   $: props = { "aria-current": current ? "page" : undefined };
 </script>
 
-<a {...$$restProps} {...props} class:SideNav-item={true} {href} on:click>
+<a
+  {...$$restProps}
+  {...props}
+  class:SideNav-item="{true}"
+  href="{href}"
+  on:click
+>
   <slot />
 </a>

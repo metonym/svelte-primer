@@ -7,15 +7,16 @@
 
 <button
   {...$$restProps}
-  {type}
-  class={[
+  type="{type}"
+  class="{[
     'btn-mktg mr-2',
     kind && `btn-${kind}-mktg`,
     large && 'btn-large-mktg',
-    transparent && 'btn-transparent'
+    transparent && 'btn-transparent',
   ]
     .filter(Boolean)
-    .join(' ')}
-  on:click>
+    .join(' ')}"
+  on:click
+>
   <slot />
 </button>
