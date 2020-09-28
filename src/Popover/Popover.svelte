@@ -5,7 +5,8 @@
 
 <div
   {...$$restProps}
-  class={['Popover', $$restProps.class].filter(Boolean).join(' ')}>
+  class="{['Popover', $$restProps.class].filter(Boolean).join(' ')}"
+>
   {#if open}
     <slot />
   {/if}

@@ -21,19 +21,18 @@
 
 <span
   {...$$restProps}
-  class={[
+  class="{[
     'Progress',
     large && 'Progress--large',
     small && 'Progress--small',
     inline && 'd-inline-flex',
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}
-  style={[inline && 'max-width: 160px;', $$restProps.style]
+    .join(' ')}"
+  style="{[inline && 'max-width: 160px;', $$restProps.style]
     .filter(Boolean)
-    .join(';')}>
-  <slot>
-    <span class="bg-green" style="width: {progress}%;" />
-  </slot>
+    .join(';')}"
+>
+  <slot><span class="bg-green" style="width: {progress}%;"></span></slot>
 </span>

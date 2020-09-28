@@ -17,23 +17,24 @@
 {#if variant === 'button'}
   <button
     {...$$restProps}
-    {type}
-    class:btn={true}
-    class:btn-sm={size === 'small'}
-    class:btn-large={size === 'large'}
-    class:btn-primary={kind === 'primary'}
-    class:btn-danger={kind === 'danger'}
-    class:btn-outline={kind === 'outline'}
-    class:btn-block={block}
-    class:btn-invisible={invisible}
-    aria-disabled={disabled}
-    on:click>
+    type="{type}"
+    class:btn="{true}"
+    class:btn-sm="{size === 'small'}"
+    class:btn-large="{size === 'large'}"
+    class:btn-primary="{kind === 'primary'}"
+    class:btn-danger="{kind === 'danger'}"
+    class:btn-outline="{kind === 'outline'}"
+    class:btn-block="{block}"
+    class:btn-invisible="{invisible}"
+    aria-disabled="{disabled}"
+    on:click
+  >
     <slot />
   </button>
 {/if}
 
 {#if variant === 'link-button'}
-  <button {...$$restProps} {type} class:btn-link={true} on:click>
+  <button {...$$restProps} type="{type}" class:btn-link="{true}" on:click>
     <slot />
   </button>
 {/if}
@@ -42,17 +43,18 @@
   <a
     {...$$restProps}
     role="button"
-    {href}
-    class:btn={true}
-    class:btn-sm={size === 'small'}
-    class:btn-large={size === 'large'}
-    class:btn-primary={kind === 'primary'}
-    class:btn-danger={kind === 'danger'}
-    class:btn-outline={kind === 'outline'}
-    class:btn-block={block}
-    class:btn-invisible={invisible}
-    aria-disabled={disabled}
-    on:click>
+    href="{href}"
+    class:btn="{true}"
+    class:btn-sm="{size === 'small'}"
+    class:btn-large="{size === 'large'}"
+    class:btn-primary="{kind === 'primary'}"
+    class:btn-danger="{kind === 'danger'}"
+    class:btn-outline="{kind === 'outline'}"
+    class:btn-block="{block}"
+    class:btn-invisible="{invisible}"
+    aria-disabled="{disabled}"
+    on:click
+  >
     <slot />
   </a>
 {/if}
@@ -60,11 +62,12 @@
 {#if variant === 'octicon'}
   <button
     {...$$restProps}
-    {type}
-    class:btn-octicon={!close}
-    class:btn-octicon-danger={kind === 'danger'}
-    class:close-button={close}
-    on:click>
+    type="{type}"
+    class:btn-octicon="{!close}"
+    class:btn-octicon-danger="{kind === 'danger'}"
+    class:close-button="{close}"
+    on:click
+  >
     <slot>
       {#if close}
         <X />
@@ -77,13 +80,14 @@
   <span class="hidden-text-expander" class:inline>
     <button
       {...$$restProps}
-      {type}
-      class:ellipsis-expander={true}
-      aria-expanded={expanded}
+      type="{type}"
+      class:ellipsis-expander="{true}"
+      aria-expanded="{expanded}"
       on:click
-      on:click={() => {
+      on:click="{() => {
         expanded = !expanded;
-      }}>
+      }}"
+    >
       <slot>&hellip;</slot>
     </button>
   </span>

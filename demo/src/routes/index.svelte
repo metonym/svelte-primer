@@ -35,7 +35,7 @@
     Timeline,
     Toast,
     Tooltip,
-    Truncate
+    Truncate,
   } from "svelte-primer";
   import {
     MarkGithub,
@@ -43,7 +43,7 @@
     Tools,
     Eye,
     Flame,
-    GitCommit
+    GitCommit,
   } from "svelte-octicons";
 
   export let copy = async () => {

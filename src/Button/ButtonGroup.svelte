@@ -1,3 +1,3 @@
-<div {...$$restProps} class:BtnGroup={true}>
+<div {...$$restProps} class:BtnGroup="{true}">
   <slot />
 </div>

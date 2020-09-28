@@ -6,7 +6,7 @@
 </script>
 
 {#if search}
-  <div class:subnav={true}>
+  <div class:subnav="{true}">
     <nav class="subnav-links">
       <slot />
     </nav>
@@ -14,20 +14,21 @@
       <input
         {...$$restProps}
         type="search"
-        class:form-control={true}
-        class:subnav-search-input={true}
+        class:form-control="{true}"
+        class:subnav-search-input="{true}"
         bind:value
         on:input
         on:change
         on:focus
         on:blur
         on:keydown
-        on:keyup />
+        on:keyup
+      />
       <Search class="subnav-search-icon" />
     </div>
   </div>
 {:else}
-  <nav {...$$restProps} class:subnav={true}>
+  <nav {...$$restProps} class:subnav="{true}">
     <slot />
   </nav>
 {/if}

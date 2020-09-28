@@ -4,7 +4,8 @@
 
 <div
   {...$$restProps}
-  class:avatar-parent-child={true}
-  class:d-inline-flex={true}>
+  class:avatar-parent-child="{true}"
+  class:d-inline-flex="{true}"
+>
   <slot />
 </div>

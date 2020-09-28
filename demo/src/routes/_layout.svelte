@@ -13,12 +13,12 @@
   let innerWidth = 0;
 
   setContext("Root", {
-    set: current => {
+    set: (current) => {
       tail.set(current);
     },
     clear: () => {
       tail.set(undefined);
-    }
+    },
   });
 
   afterUpdate(() => {
@@ -84,17 +84,18 @@
   <Primer.Header.Header>
     <Primer.Header.Item>
       <Primer.Header.Link
-        href={process.env.NODE_ENV === 'development' ? '/' : '/svelte-primer/'}
-        on:click={() => {
+        href="{process.env.NODE_ENV === 'development' ? '/' : '/svelte-primer/'}"
+        on:click="{() => {
           expanded = false;
-        }}>
+        }}"
+      >
         <span class="f4">svelte-primer</span>
         <span class="f6 ml-1 text-gray-light">v{pkg.version}</span>
       </Primer.Header.Link>
     </Primer.Header.Item>
     <Primer.Header.Item class="mr-0" style="margin-left: auto">
       <Primer.Header.Link href="https://github.com/metonym/svelte-primer">
-        <MarkGithub width={24} height={24} />
+        <MarkGithub width="{24}" height="{24}" />
       </Primer.Header.Link>
     </Primer.Header.Item>
     <Primer.Header.Item class="mobile-menu ml-2 mr-0">
@@ -102,10 +103,11 @@
         variant="octicon"
         class="border border-white-fade pl-2 pr-2 rounded-1"
         aria-label="Menu"
-        aria-expanded={expanded}
-        on:click={() => {
+        aria-expanded="{expanded}"
+        on:click="{() => {
           expanded = !expanded;
-        }}>
+        }}"
+      >
         <ThreeBars />
       </Primer.Button>
     </Primer.Header.Item>
@@ -118,10 +120,11 @@
         {#each components as component, i (component)}
           <Primer.Navigation.SideNavSubItem
             href="components/{component}"
-            on:click={() => {
+            on:click="{() => {
               expanded = false;
-            }}
-            current={segment === 'components' && $tail === component}>
+            }}"
+            current="{segment === 'components' && $tail === component}"
+          >
             {component}
           </Primer.Navigation.SideNavSubItem>
         {/each}
@@ -135,9 +138,10 @@
   {#if expanded}
     <div
       class="overlay bg-gray-dark"
-      on:click={() => {
+      on:click="{() => {
         expanded = false;
-      }} />
+      }}"
+    ></div>
   {/if}
 {:else}
   <slot />

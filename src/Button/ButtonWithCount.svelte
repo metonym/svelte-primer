@@ -10,15 +10,22 @@
 </script>
 
 <div {...$$restProps} class="clearfix">
-  <Button variant="link" size="small" class="btn-with-count" {href} on:click>
+  <Button
+    variant="link"
+    size="small"
+    class="btn-with-count"
+    href="{href}"
+    on:click
+  >
     <slot />
   </Button>
   <a
     class="social-count"
-    href={countHref}
-    on:click={() => {
+    href="{countHref}"
+    on:click="{() => {
       dispatch('click:count');
-    }}>
+    }}"
+  >
     {count}
   </a>
 </div>

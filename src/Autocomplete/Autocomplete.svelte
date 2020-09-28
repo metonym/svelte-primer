@@ -4,17 +4,18 @@
   import Input from "../Form/FormInput.svelte";
 </script>
 
-<div class:position-relative={true}>
+<div class:position-relative="{true}">
   <Input
     {...$$restProps}
-    block={true}
+    block="{true}"
     bind:value
     on:input
     on:change
     on:focus
     on:blur
     on:keydown
-    on:keyup />
+    on:keyup
+  />
   <ul class="autocomplete-results">
     <slot />
   </ul>

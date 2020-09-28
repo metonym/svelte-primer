@@ -4,16 +4,17 @@
 
 <div
   {...$$restProps}
-  class={[
+  class="{[
     'css-truncate',
     !fixed && 'css-truncate-overflow',
     fixed && 'css-truncate-target',
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}
-  style={[!$$restProps.style && fixed && 'max-width: 125px', $$restProps.style]
+    .join(' ')}"
+  style="{[!$$restProps.style && fixed && 'max-width: 125px', $$restProps.style]
     .filter(Boolean)
-    .join(';')}>
+    .join(';')}"
+>
   <slot />
 </div>

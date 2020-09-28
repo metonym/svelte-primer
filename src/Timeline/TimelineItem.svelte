@@ -6,17 +6,18 @@
   let id = undefined;
 
   setContext("TimelineItem", {
-    set: href => {
+    set: (href) => {
       id = href.replace(/\#/g, "");
-    }
+    },
   });
 </script>
 
 <div
   {...$$restProps}
-  {id}
-  class:TimelineItem={true}
-  class:TimelineItem--condensed={condensed}>
+  id="{id}"
+  class:TimelineItem="{true}"
+  class:TimelineItem--condensed="{condensed}"
+>
   <slot name="avatar" />
   <slot name="badge" />
   <div class="TimelineItem-body">

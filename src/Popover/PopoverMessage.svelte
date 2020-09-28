@@ -6,13 +6,14 @@
 
 <Box
   {...$$restProps}
-  class={[
+  class="{[
     'Popover-message box-shadow-large',
     large && 'Popover-message--large',
     'text-left p-4 mt-2',
-    $$restProps.class
+    $$restProps.class,
   ]
     .filter(Boolean)
-    .join(' ')}>
+    .join(' ')}"
+>
   <slot />
 </Box>

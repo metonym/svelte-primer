@@ -1,4 +1,4 @@
-<div {...$$restProps} class:input-group={true}>
+<div {...$$restProps} class:input-group="{true}">
   <slot />
   <span class="input-group-button">
     <slot name="button" />
