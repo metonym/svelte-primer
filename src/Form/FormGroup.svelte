@@ -1,7 +1,9 @@
 <script>
   export let id = "primer-" + Math.random().toString(36);
   export let label = "Label";
-  export let validation = undefined; // 'success' | 'warning' | 'error'
+
+  /** @type {"success" | "warning" | "error"} */
+  export let validation = undefined;
   export let validationText = undefined;
 </script>
 

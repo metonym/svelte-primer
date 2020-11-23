@@ -1,6 +1,8 @@
 <script>
   export let title = "Label: title";
-  export let color = "blue"; // 'blue' | 'green' | 'red' | string:{color}
+
+  /** @type {"blue" | "green" | "red" | string} */
+  export let color = "blue";
 </script>
 
 <span

@@ -1,5 +1,6 @@
 <script>
-  export let align = "left"; // 'left' | 'right'
+  /** @type {"left" | "right"} */
+  export let align = "left";
 
   import { setContext } from "svelte";
 

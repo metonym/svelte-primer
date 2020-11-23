@@ -1,13 +1,15 @@
 <script>
   export let summary = "Open dialog";
-  export let size = undefined; // 'narrow' | 'wide'
+
+  /** @type {"narrow" | "wide"} */
+  export let size = undefined;
   export let open = false;
   export let transparentOverlay = false;
 
   import X from "svelte-octicons/lib/X";
   import Button from "./Button/Button.svelte";
 
-  let ref = undefined;
+  let ref = null;
 
   function close() {
     ref.removeAttribute("open");
@@ -38,9 +40,7 @@
 
 <svelte:body
   on:keydown="{({ key }) => {
-    if (ref.hasAttribute('open') && key === 'Escape') {
-      close();
-    }
+    if (ref.hasAttribute('open') && key === 'Escape') close();
   }}" />
 
 <details

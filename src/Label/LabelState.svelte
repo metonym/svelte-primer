@@ -1,5 +1,6 @@
 <script>
-  export let status = undefined; // 'open' | 'closed' | 'merged'
+  /** @type {"open" | "closed" | "merged"} */
+  export let status = undefined;
 
   import GitPullRequest from "svelte-octicons/lib/GitPullRequest";
   import GitMerge from "svelte-octicons/lib/GitMerge";

@@ -1,5 +1,6 @@
 <script>
-  export let kind = undefined; // 'success' | 'warning' | 'error'
+  /** @type {"success" | "warning" | "error"} */
+  export let kind = undefined;
   export let loading = false;
   export let dismissable = false;
 

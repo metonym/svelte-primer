@@ -1,6 +1,9 @@
 <script>
+  /** @type {string} */
   export let title = undefined;
-  export let color = "blue"; // 'blue' | 'green' | 'gray' | 'gray-darker' | 'orange'
+
+  /** @type {"blue" | "green" | "gray" | "gray-darker" | "orange"} */
+  export let color = "blue";
   export let outline = false;
 </script>
 

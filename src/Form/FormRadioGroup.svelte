@@ -1,6 +1,8 @@
 <script>
   export let value = undefined;
-  export let options = []; // { id?:string; value: string; }[]
+
+  /** @type {{ id?:string; value: string; }[]} */
+  export let options = [];
 
   $: if (value === undefined && options.length > 0) {
     value = options[0].value;
@@ -8,7 +10,7 @@
 </script>
 
 <div class="radio-group">
-  {#each options as option, i (option.value)}
+  {#each options as option (option.value)}
     <input
       {...$$restProps}
       type="radio"

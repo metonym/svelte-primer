@@ -1,13 +1,11 @@
 <script>
   export let href = "#";
   export let current = false;
-
-  $: props = { "aria-current": current ? "page" : undefined };
 </script>
 
 <a
   {...$$restProps}
-  {...props}
+  aria-current="{current ? 'page' : undefined}"
   class:SideNav-subItem="{true}"
   href="{href}"
   on:click

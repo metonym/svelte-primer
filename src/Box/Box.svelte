@@ -1,8 +1,11 @@
 <script>
-  export let border = undefined; // 'dashed'
+  /** @type {undefined | "dashed"} */
+  export let border = undefined;
   export let condensed = false;
   export let spacious = false;
-  export let theme = undefined; // 'blue' | 'danger'
+
+  /** @type {"blue" | "danger"} */
+  export let theme = undefined;
 </script>
 
 <div

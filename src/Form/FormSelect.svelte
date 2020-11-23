@@ -1,6 +1,9 @@
 <script>
+  /** @type {any} */
   export let value = undefined;
-  export let options = []; // { id?:string; value: string; }[]
+
+  /** @type {{ id?:string; value: string; }[]} */
+  export let options = [];
   export let small = false;
 </script>
 

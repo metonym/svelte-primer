@@ -1,5 +1,6 @@
 <script>
-  export let size = "small"; // 'small' | 'medium' | 'large'
+  /** @type {"small" | "medium" | "large"} */
+  export let size = "small";
   export let href = undefined;
 </script>
 

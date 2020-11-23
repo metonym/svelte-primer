@@ -1,6 +1,8 @@
 <script>
   export let title = "Dropdown";
-  export let direction = "se"; // 'n' | 'ne' | 'e' | 'se' | 's' | 'sw' | 'w' | 'nw'
+
+  /** @type {"n" | "ne" | "e" | "se" | "s" | "sw" | "w" | "nw"} */
+  export let direction = "se";
   export let dark = false;
 </script>
 

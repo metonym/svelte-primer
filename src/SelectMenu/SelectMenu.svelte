@@ -2,7 +2,9 @@
   export let summary = "Select menu";
   export let title = "Title";
   export let open = false;
-  export let align = "left"; // 'left' | 'right'
+
+  /** @type {"left" | "right"} */
+  export let align = "left";
 
   import X from "svelte-octicons/lib/X";
 </script>

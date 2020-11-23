@@ -1,9 +1,15 @@
 <script>
   export let type = "button";
-  export let variant = "button"; // 'button' | 'link-button' | 'link' | 'octicon' | 'hidden-text'
+
+  /** @type {"button" | "link-button" | "link" | "octicon" | "hidden-text"} */
+  export let variant = "button";
   export let href = "#";
-  export let size = undefined; // 'small' | 'large'
-  export let kind = undefined; // 'primary' | 'danger' | 'outline'
+
+  /** @type {"small" | "large"} */
+  export let size = undefined;
+
+  /** @type {"primary" | "danger" | "outline"} */
+  export let kind = undefined;
   export let disabled = false;
   export let block = false;
   export let invisible = false;

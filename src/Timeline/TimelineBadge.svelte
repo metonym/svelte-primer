@@ -1,14 +1,13 @@
 <script>
-  export let color = undefined; // 'blue' | 'green' | 'red' | string:{color}
+  /** @type {"blue" | "green" | "red" | string} */
+  export let color = undefined;
   export let href = undefined;
 
   import { getContext } from "svelte";
 
   const ctx = getContext("TimelineItem");
 
-  $: if (ctx && href) {
-    ctx.set(href);
-  }
+  $: if (ctx && href) ctx.set(href);
 </script>
 
 {#if href}

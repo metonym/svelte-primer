@@ -1,6 +1,8 @@
 <script>
   export let type = "button";
-  export let kind = undefined; // 'primary' | 'outline'
+
+  /** @type {"primary" | "outline"} */
+  export let kind = undefined;
   export let transparent = false;
   export let large = false;
 </script>

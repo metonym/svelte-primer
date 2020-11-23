@@ -1,5 +1,6 @@
 <script>
-  export let theme = undefined; // 'gray' | 'yellow' | 'blue' string:{color}
+  /** @type {"gray" | "yellow" | "blue" | string} */
+  export let theme = undefined;
   export let unread = false;
 </script>
 

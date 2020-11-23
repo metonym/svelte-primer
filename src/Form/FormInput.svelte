@@ -3,7 +3,9 @@
   export let type = "text";
 
   export let placeholder = "Placeholder text";
-  export let size = undefined; // 'small' | 'large'
+
+  /** @type {"small" | "large"} */
+  export let size = undefined;
   export let block = false;
   export let contrast = false;
   export let dark = false;

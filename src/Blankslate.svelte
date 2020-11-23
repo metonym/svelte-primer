@@ -1,5 +1,6 @@
 <script>
-  export let size = undefined; // 'narrow' | 'spacious'
+  /** @type {"narrow" | "spacious"} */
+  export let size = undefined;
   export let large = false;
   export let capped = false;
   export let bordered = false;

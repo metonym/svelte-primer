@@ -1,7 +1,9 @@
 <script>
   export let full = false;
   export let banner = false;
-  export let kind = undefined; // 'success' | 'warn' | 'error'
+
+  /** @type {"success" | "warn" | "error"} */
+  export let kind = undefined;
   export let dismissable = false;
 
   import X from "svelte-octicons/lib/X";

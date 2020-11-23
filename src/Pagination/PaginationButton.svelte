@@ -1,7 +1,9 @@
 <script>
   export let href = "#";
   export let disabled = false;
-  export let kind = "next"; // 'next' | 'previous'
+
+  /** @type {"next" | "previous"} */
+  export let kind = "next";
 
   $: capitalized = kind.slice(0, 1).toUpperCase() + kind.slice(1);
   $: props = {

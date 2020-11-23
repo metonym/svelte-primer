@@ -1,6 +1,8 @@
 <script>
   export let id = "primer-" + Math.random().toString(36);
-  export let type = "checkbox"; // 'checkbox' | 'radio'
+
+  /** @type {"checkbox" | "radio"}*/
+  export let type = "checkbox";
   export let checked = false;
   export let label = "Label";
   export let emphasis = false;

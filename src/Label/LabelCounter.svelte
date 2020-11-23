@@ -1,5 +1,6 @@
 <script>
-  export let color = undefined; // 'gray' | 'gray-light'
+  /** @type {"gray" | "gray-light"} */
+  export let color = undefined;
 </script>
 
 <span

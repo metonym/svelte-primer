@@ -11,14 +11,10 @@
   const ctx = getContext("AvatarStack");
 
   onMount(() => {
-    if (ctx) {
-      ctx.add({ id });
-    }
+    if (ctx) ctx.add({ id });
 
     return () => {
-      if (ctx) {
-        ctx.remove({ id });
-      }
+      if (ctx) ctx.remove({ id });
     };
   });
 

@@ -1,4 +1,5 @@
 <script>
+  /** @slot {{props: { class: string; } }} heading */
   export let spacious = false;
   export let danger = false;
 </script>
