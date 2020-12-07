@@ -7,6 +7,23 @@
 
 This component library implements [Primer CSS components](https://primer.style/css/components).
 
+```svelte
+<script>
+  import { Button, ButtonMarketing, Dropdown } from "svelte-primer";
+</script>
+
+ <Button variant="octicon" close />
+
+ <Dropdown.Dropdown title="Dropdown menu" dark>
+  <Dropdown.Header>Header</Dropdown.Header>
+  <Dropdown.Item>one</Dropdown.Item>
+  <Dropdown.Divider />
+  <Dropdown.Item>two</Dropdown.Item>
+</Dropdown.Dropdown>
+
+<ButtonMarketing large>Default</ButtonMarketing>
+```
+
 [Documentation](docs)
 
 ## Not supported

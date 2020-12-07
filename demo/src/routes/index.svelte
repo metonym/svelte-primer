@@ -1,7 +1,7 @@
 <script>
   import { goto } from "@sapper/app";
-  import snapshot from "../../../.size-snapshot.json";
-  import prettyBytes from "pretty-bytes";
+  // import snapshot from "../../../.size-snapshot.json";
+  // import prettyBytes from "pretty-bytes";
   import {
     Alert,
     Autocomplete,
@@ -56,7 +56,7 @@
   let radioGroupValue = undefined;
   let selectValue = "Git";
 
-  console.log("gzip", prettyBytes(snapshot["lib/index.mjs"].gzipped));
+  // console.log("gzip", prettyBytes(snapshot["lib/index.mjs"].gzipped));
 </script>
 
 <svelte:head>
@@ -72,7 +72,7 @@
   </p>
 </div>
 
-<!--
+
 <Blankslate size="spacious">
   <h3 class="mb-1">svelte-primer</h3>
   <p>Svelte implementation of the GitHub Primer design system</p>
@@ -486,4 +486,4 @@
 <div class="Subhead">
   <div class="Subhead-heading">Plain subhead</div>
 </div>
- -->
+ <!---->
