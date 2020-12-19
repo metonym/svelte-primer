@@ -36,7 +36,7 @@ export default () => {
         name: UMD ? pkg.name : undefined,
         exports: "named",
       },
-      plugins: [svelte(), resolve()],
+      plugins: [svelte({ emitCss: false }), resolve()],
     };
   });
 };
