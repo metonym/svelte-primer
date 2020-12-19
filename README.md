@@ -9,9 +9,40 @@ This component library implements [Primer CSS components](https://primer.style/c
 
 ## Table of Contents
 
+- [Alert](#alert)
+- [Autocomplete](#autocomplete)
+- [Avatar](#avatar)
+- [AvatarStack](#avatarstack)
+- [AvatarParentChild](#avatarparentchild)
+- [Button](#button)
+- [ButtonMarketing](#buttonmarketing)
+- [BranchName](#branchname)
+- [Breadcrumb](#breadcrumb)
 - [Dropdown](#dropdown)
+- [Label](#label)
+- [Loader](#loader)
+- [Pagination](#pagination)
+- [Truncate](#truncate)
+- [SelectMenu](#selectmenu)
 
 ---
+
+## Alert
+
+```svelte
+<script>
+  import { Alert } from "svelte-primer";
+</script>
+
+<Alert>Alert (default)</Alert>
+<Alert full>Alert (full)</Alert>
+<Alert dismissable>Alert (dismissable)</Alert>
+<Alert full dismissable>Alert (full and dismissable)</Alert>
+
+<Alert kind="success">Alert (success)</Alert>
+<Alert kind="warn">Alert (warn)</Alert>
+<Alert kind="error">Alert (error)</Alert>
+```
 
 ## Autocomplete
 
@@ -53,7 +84,7 @@ This component library implements [Primer CSS components](https://primer.style/c
 />
 ```
 
-### Avatar Stack
+## AvatarStack
 
 ```svelte
 <script>
@@ -66,7 +97,7 @@ This component library implements [Primer CSS components](https://primer.style/c
 </AvatarStack>
 ```
 
-### Avatar (Parent child)
+## AvatarParentChild
 
 ```svelte
 <script>
@@ -81,6 +112,67 @@ This component library implements [Primer CSS components](https://primer.style/c
   />
   <Avatar child alt="nat" src="https://github.com/nat.png?s=40" />
 </AvatarParentChild>
+```
+
+## Button
+
+```svelte
+<script>
+  import { Button } from "svelte-primer";
+</script>
+
+<Button>Button</Button>
+<Button disabled>Button (disabled)</Button>
+<Button invisible>Button (invisible)</Button>
+<Button block>Button (block)</Button>
+<!-- <Button close>Button (close)</Button>
+<Button expanded>Button (expanded)</Button> -->
+
+<br />
+
+<Button kind="primary">Button (primary)</Button>
+<Button kind="danger">Button (danger)</Button>
+<Button kind="outline">Button (outline)</Button>
+
+<br />
+
+<Button size="small">Button (small)</Button>
+<Button size="large">Button (large)</Button>
+
+<br />
+
+<Button variant="octicon" />
+<Button variant="octicon" close />
+<Button variant="octicon" close kind="danger" />
+
+<br />
+
+<Button variant="hidden-text" />
+<Button variant="hidden-text" inline />
+
+<br />
+
+<Button variant="link" href="#">Link</Button>
+<Button variant="link-button" href="#">Link button</Button>
+```
+
+## ButtonMarketing
+
+```svelte
+<script>
+  import { ButtonMarketing } from "svelte-primer";
+</script>
+
+<ButtonMarketing>Default</ButtonMarketing>
+<ButtonMarketing kind="primary">Primary</ButtonMarketing>
+<ButtonMarketing kind="outline">Outline</ButtonMarketing>
+
+<ButtonMarketing large>Default large</ButtonMarketing>
+<ButtonMarketing large kind="primary">Primary large</ButtonMarketing>
+<ButtonMarketing large kind="outline">Outline large</ButtonMarketing>
+<div class="bg-gray-dark">
+  <ButtonMarketing large transparent>Transparent</ButtonMarketing>
+</div>
 ```
 
 ## BranchName
@@ -168,6 +260,29 @@ Open: {open}
 <Loader />
 ```
 
+## Pagination
+
+```svelte
+<script>
+  import { Pagination } from "svelte-primer";
+</script>
+
+<Pagination.Pagination>
+  <Pagination.Button href="#" kind="previous" />
+  <Pagination.Button href="#" kind="next" />
+</Pagination.Pagination>
+
+<Pagination.Pagination>
+  <Pagination.Button kind="previous" disabled />
+  <em aria-current="page">1</em>
+  <a href="#url" aria-label="Page 2">2</a>
+  <span class="gap">…</span>
+  <a href="#url" aria-label="Page 9">9</a>
+  <a href="#url" aria-label="Page 10">10</a>
+  <Pagination.Button kind="next" />
+</Pagination.Pagination>
+```
+
 ## Truncate
 
 ```svelte
@@ -182,6 +297,19 @@ Open: {open}
 </div>
 ```
 
+## SelectMenu
+
+```svelte
+<script>
+  import { SelectMenu } from "svelte-primer";
+</script>
+
+<SelectMenu.SelectMenu title="Menu title">
+  <SelectMenu.Item>Item 1</SelectMenu.Item>
+  <SelectMenu.Item>Item 2</SelectMenu.Item>
+  <SelectMenu.Item>Item 3</SelectMenu.Item>
+</SelectMenu.SelectMenu>
+```
 
 ---
 
