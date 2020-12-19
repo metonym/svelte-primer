@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface BoxOverlayProps {
   /**
@@ -19,12 +20,8 @@ export interface BoxOverlayProps {
   transparentOverlay?: boolean;
 }
 
-export default class BoxOverlay {
-  $$prop_def: BoxOverlayProps;
-  $$slot_def: {
-    default: {};
-    footer: { props: { class: "Box-footer" } };
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class BoxOverlay extends SvelteComponentTyped<
+  BoxOverlayProps,
+  {},
+  { default: {}; footer: { props: { class: "Box-footer" } } }
+> {}

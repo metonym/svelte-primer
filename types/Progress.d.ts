@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface ProgressProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
+export interface ProgressProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
   /**
    * Basic example:
    *
@@ -33,11 +35,8 @@ export interface ProgressProps extends svelte.JSX.HTMLAttributes<HTMLElementTagN
   inline?: boolean;
 }
 
-export default class Progress {
-  $$prop_def: ProgressProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Progress extends SvelteComponentTyped<
+  ProgressProps,
+  {},
+  { default: {} }
+> {}

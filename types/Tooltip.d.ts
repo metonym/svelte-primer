@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface TooltipProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
+export interface TooltipProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
   /**
    * @default "Tooltip text"
    */
@@ -29,11 +31,8 @@ export interface TooltipProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNa
   multiline?: boolean;
 }
 
-export default class Tooltip {
-  $$prop_def: TooltipProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Tooltip extends SvelteComponentTyped<
+  TooltipProps,
+  {},
+  { default: {} }
+> {}

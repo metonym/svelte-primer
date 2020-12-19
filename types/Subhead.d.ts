@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface SubheadProps {
   /**
@@ -12,13 +13,12 @@ export interface SubheadProps {
   danger?: boolean;
 }
 
-export default class Subhead {
-  $$prop_def: SubheadProps;
-  $$slot_def: {
+export default class Subhead extends SvelteComponentTyped<
+  SubheadProps,
+  {},
+  {
     actions: { props: { class: "Subhead-actions" } };
     description: { props: { class: "Subhead-description" } };
     heading: { props: { class: string } };
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+  }
+> {}

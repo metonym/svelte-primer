@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface BlankslateProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
+export interface BlankslateProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
   size?: "narrow" | "spacious";
 
   /**
@@ -19,11 +21,8 @@ export interface BlankslateProps extends svelte.JSX.HTMLAttributes<HTMLElementTa
   bordered?: boolean;
 }
 
-export default class Blankslate {
-  $$prop_def: BlankslateProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Blankslate extends SvelteComponentTyped<
+  BlankslateProps,
+  {},
+  { default: {} }
+> {}

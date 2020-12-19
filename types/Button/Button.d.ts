@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface ButtonProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
+export interface ButtonProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
   /**
    * @default "button"
    */
@@ -51,12 +53,8 @@ export interface ButtonProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNam
   inline?: boolean;
 }
 
-export default class Button {
-  $$prop_def: ButtonProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: "click", cb: (event: WindowEventMap["click"]) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Button extends SvelteComponentTyped<
+  ButtonProps,
+  { click: WindowEventMap["click"] },
+  { default: {} }
+> {}

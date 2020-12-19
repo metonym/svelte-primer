@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface AvatarProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["img"]> {
+export interface AvatarProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["img"]> {
   /**
    * @default false
    */
@@ -27,9 +29,4 @@ export interface AvatarProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNam
   height?: number;
 }
 
-export default class Avatar {
-  $$prop_def: AvatarProps;
-  $$slot_def: {};
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Avatar extends SvelteComponentTyped<AvatarProps, {}, {}> {}

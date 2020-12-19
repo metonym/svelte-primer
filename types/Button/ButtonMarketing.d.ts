@@ -1,11 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface ButtonMarketingProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
-  /**
-   * @default "button"
-   */
-  type?: string;
-
+export interface ButtonMarketingProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
   kind?: "primary" | "outline";
 
   /**
@@ -19,12 +16,8 @@ export interface ButtonMarketingProps extends svelte.JSX.HTMLAttributes<HTMLElem
   large?: boolean;
 }
 
-export default class ButtonMarketing {
-  $$prop_def: ButtonMarketingProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: "click", cb: (event: WindowEventMap["click"]) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class ButtonMarketing extends SvelteComponentTyped<
+  ButtonMarketingProps,
+  { click: WindowEventMap["click"] },
+  { default: {} }
+> {}

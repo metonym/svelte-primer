@@ -1,15 +1,13 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface LabelStateProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
+export interface LabelStateProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
   status?: "open" | "closed" | "merged";
 }
 
-export default class LabelState {
-  $$prop_def: LabelStateProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: "click", cb: (event: WindowEventMap["click"]) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class LabelState extends SvelteComponentTyped<
+  LabelStateProps,
+  { click: WindowEventMap["click"] },
+  { default: {} }
+> {}

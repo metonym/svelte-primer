@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface LabelDiffstatProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
+export interface LabelDiffstatProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
   /**
    * @default 3
    */
@@ -22,14 +24,8 @@ export interface LabelDiffstatProps extends svelte.JSX.HTMLAttributes<HTMLElemen
   title?: string;
 }
 
-export default class LabelDiffstat {
-  $$prop_def: LabelDiffstatProps;
-  $$slot_def: {
-    added: {};
-    deleted: {};
-    size: {};
-  };
-
-  $on(eventname: "click", cb: (event: WindowEventMap["click"]) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class LabelDiffstat extends SvelteComponentTyped<
+  LabelDiffstatProps,
+  { click: WindowEventMap["click"] },
+  { added: {}; deleted: {}; size: {} }
+> {}
