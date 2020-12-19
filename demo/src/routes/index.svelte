@@ -72,32 +72,32 @@
   </p>
 </div>
 
-
 <Blankslate size="spacious">
   <h3 class="mb-1">svelte-primer</h3>
   <p>Svelte implementation of the GitHub Primer design system</p>
   <Button
     kind="primary"
     class="my-3"
-    on:click={() => {
+    on:click="{() => {
       goto('components/');
-    }}>
+    }}"
+  >
     Get started
   </Button>
   <p>
     <Button
       variant="link-button"
-      href="https://github.com/metonym/svelte-primer">
+      href="https://github.com/metonym/svelte-primer"
+    >
       View on GitHub
     </Button>
   </p>
 </Blankslate>
 
-
 <Header.Header>
   <Header.Item>
     <Header.Link href="components/" class="f4 d-flex flex-items-center">
-      <MarkGithub width={32} height={32} class="mr-2" />
+      <MarkGithub width="{32}" height="{32}" class="mr-2" />
       <span>GitHub</span>
     </Header.Link>
   </Header.Item>
@@ -112,7 +112,8 @@
       alt="jonrohan"
       src="https://github.com/jonrohan.png?v=3&s=64"
       width="20"
-      height="20" />
+      height="20"
+    />
   </div>
 </Header.Header>
 
@@ -120,9 +121,10 @@
   <Pagination.Button kind="previous" />
   <Pagination.Button
     kind="next"
-    on:click={() => {
+    on:click="{() => {
       copy();
-    }} />
+    }}"
+  />
 </Pagination.Pagination>
 
 <Pagination.Pagination>
@@ -148,14 +150,16 @@
 <BranchName href="/">a_new_feature_branch</BranchName>
 
 <Form.RadioGroup
-  bind:value={radioGroupValue}
-  options={[{ value: 'Option A' }, { value: 'Option B' }, { value: 'Option C' }]} />
+  bind:value="{radioGroupValue}"
+  options="{[{ value: 'Option A' }, { value: 'Option B' }, { value: 'Option C' }]}"
+/>
 {radioGroupValue}
 <Form.Group
   label="Example text"
   validation="error"
   validationText="Success"
-  let:props>
+  let:props
+>
   <Form.Input {...props} placeholder="Type something..." />
 </Form.Group>
 
@@ -170,20 +174,23 @@
 
 <Autocomplete.Autocomplete
   aria-label="Search by user"
-  placeholder="Search by user">
+  placeholder="Search by user"
+>
   <Autocomplete.Item selected>GitHub Inc</Autocomplete.Item>
   <Autocomplete.Item>Hubot</Autocomplete.Item>
   <Autocomplete.Item>Monalisa Octocat</Autocomplete.Item>
 </Autocomplete.Autocomplete>
 
 <Form.Select
-  bind:value={selectValue}
-  options={[{ value: 'Choose an option' }, { value: 'Git' }, { value: 'Subversion' }]} />
+  bind:value="{selectValue}"
+  options="{[{ value: 'Choose an option' }, { value: 'Git' }, { value: 'Subversion' }]}"
+/>
 {selectValue}
 <div
-  on:click={() => {
+  on:click="{() => {
     selectValue = 'Choose an option';
-  }}>
+  }}"
+>
   Reset selectValue
 </div>
 <Box.Box theme="blue">
@@ -194,9 +201,10 @@
   <Box.Body>
     <strong class="pr-2">Box body</strong>
     <Box.IconButton
-      on:click={() => {
+      on:click="{() => {
         console.log('click');
-      }}>
+      }}"
+    >
       <Pencil />
     </Box.IconButton>
   </Box.Body>
@@ -214,12 +222,13 @@
 <div class="position-relative text-center">
   <Button
     kind="primary"
-    on:click={() => {
+    on:click="{() => {
       open = !open;
-    }}>
+    }}"
+  >
     Toggle popover
   </Button>
-  <Popover.Popover {open} class="right-0 left-0 position-relative">
+  <Popover.Popover open="{open}" class="right-0 left-0 position-relative">
     <Popover.Message>
       <h4 class="mb-2">Popover heading</h4>
       <p>Message about this particular piece of UI.</p>
@@ -245,10 +254,11 @@
   <div slot="avatar">
     <Timeline.Avatar>
       <Avatar
-        height={40}
-        width={40}
+        height="{40}"
+        width="{40}"
         alt="jonrohan"
-        src="https://github.com/jonrohan.png?v=3&s=96" />
+        src="https://github.com/jonrohan.png?v=3&s=96"
+      />
     </Timeline.Avatar>
   </div>
   <div slot="badge">
@@ -282,24 +292,26 @@
 </Timeline.Item>
 
 <Button
-  on:click={() => {
+  on:click="{() => {
     large = !large;
-  }}>
+  }}"
+>
   Toggle large variant
 </Button>
 
-<ButtonMarketing {large}>Default</ButtonMarketing>
-<ButtonMarketing {large} kind="outline">Outline</ButtonMarketing>
-<ButtonMarketing {large} kind="primary">Primary</ButtonMarketing>
+<ButtonMarketing large="{large}">Default</ButtonMarketing>
+<ButtonMarketing large="{large}" kind="outline">Outline</ButtonMarketing>
+<ButtonMarketing large="{large}" kind="primary">Primary</ButtonMarketing>
 <div class="bg-gray-dark">
-  <ButtonMarketing {large} transparent>Transparent</ButtonMarketing>
+  <ButtonMarketing large="{large}" transparent>Transparent</ButtonMarketing>
 </div>
 
 <AvatarParentChild>
   <Avatar
     parent
     alt="jonrohan"
-    src="https://github.com/jonrohan.png?v=3&s=96" />
+    src="https://github.com/jonrohan.png?v=3&s=96"
+  />
   <Avatar child alt="josh" src="https://github.com/josh.png?v=3&s=40" />
 </AvatarParentChild>
 
@@ -339,7 +351,7 @@
   <LabelState status="open" />
   <LabelState status="closed" />
   <LabelState status="merged" />
-  <LabelDiffstat added={2} deleted={2}>
+  <LabelDiffstat added="{2}" deleted="{2}">
     <span slot="size">6</span>
   </LabelDiffstat>
   <LabelDiffstat>
@@ -353,7 +365,7 @@
   <Button variant="hidden-text" inline />
 </p>
 
-<ButtonWithCount href="#url" countHref="#url" count={5}>
+<ButtonWithCount href="#url" countHref="#url" count="{5}">
   <Eye />
   <span>Watch</span>
 </ButtonWithCount>
@@ -370,22 +382,22 @@
   alt="jonrohan"
   src="https://github.com/jonrohan.png?v=3&s=144"
   width="72"
-  height="72" />
+  height="72"
+/>
 
 <Avatar
   small
   alt="jonrohan"
   src="https://github.com/jonrohan.png?v=3&s=64"
   width="32"
-  height="32" />
+  height="32"
+/>
 
 <Alert kind="success" dismissable>Content</Alert>
 
 <Subhead danger>
   <div slot="heading" let:props {...props}>Subhead with button</div>
-  <div slot="actions" let:props {...props}>
-    <a href="#url">Learn more</a>
-  </div>
+  <div slot="actions" let:props {...props}><a href="#url">Learn more</a></div>
 </Subhead>
 
 <Subhead>
@@ -413,7 +425,7 @@
 <Navigation.Underline align="right">
   <Navigation.UnderlineItem current>Link 1</Navigation.UnderlineItem>
   <Navigation.UnderlineItem>
-    <Navigation.UnderlineOcticon octicon={Tools} />
+    <Navigation.UnderlineOcticon octicon="{Tools}" />
     <span>Item 2</span>
     <LabelCounter>6</LabelCounter>
   </Navigation.UnderlineItem>
@@ -467,7 +479,8 @@
   text="This is the tooltip with multiple lines. This is the tooltip with
   multiple lines."
   align="right"
-  noDelay>
+  noDelay
+>
   Item
 </Tooltip>
 
@@ -486,4 +499,4 @@
 <div class="Subhead">
   <div class="Subhead-heading">Plain subhead</div>
 </div>
- <!---->
+<!---->

@@ -2,7 +2,7 @@
   /** @type {string} */
   export let title = undefined;
 
-  /** @type {"blue" | "green" | "gray" | "gray-darker" | "orange"} */
+  /** @type {"blue" | "green" | "gray" | "gray-darker" | "orange" | "yellow" | "red" | "purple" | "pink"} */
   export let color = "blue";
   export let outline = false;
 </script>
@@ -14,6 +14,7 @@
     outline && 'Label--outline',
     outline && color === 'green' && 'Label--outline-green',
     !outline && `bg-${color}`,
+    color && `Label--${color}`,
     $$restProps.class,
   ]
     .filter(Boolean)
