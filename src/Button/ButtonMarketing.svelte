@@ -1,6 +1,4 @@
 <script>
-  export let type = "button";
-
   /** @type {"primary" | "outline"} */
   export let kind = undefined;
   export let transparent = false;
@@ -8,8 +6,8 @@
 </script>
 
 <button
+  type="button"
   {...$$restProps}
-  type="{type}"
   class="{[
     'btn-mktg mr-2',
     kind && `btn-${kind}-mktg`,
