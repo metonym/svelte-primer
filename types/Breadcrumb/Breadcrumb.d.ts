@@ -1,12 +1,10 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface BreadcrumbProps {}
 
-export default class Breadcrumb {
-  $$prop_def: BreadcrumbProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Breadcrumb extends SvelteComponentTyped<
+  BreadcrumbProps,
+  {},
+  { default: {} }
+> {}

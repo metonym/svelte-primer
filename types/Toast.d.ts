@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface ToastProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
+export interface ToastProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
   kind?: "success" | "warning" | "error";
 
   /**
@@ -14,12 +16,8 @@ export interface ToastProps extends svelte.JSX.HTMLAttributes<HTMLElementTagName
   dismissable?: boolean;
 }
 
-export default class Toast {
-  $$prop_def: ToastProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: "dismiss", cb: (event: CustomEvent<any>) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Toast extends SvelteComponentTyped<
+  ToastProps,
+  { dismiss: CustomEvent<any> },
+  { default: {} }
+> {}

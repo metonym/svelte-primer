@@ -14,7 +14,7 @@
     "predeploy": "rollup -c",
     "deploy": "npx gh-pages -d dist",
     "prepack": "BUNDLE=true rollup -c",
-    "format": "prettier --write '*/**/*.svelte'"
+    "format": "prettier --write '{src,types}/**/*.{svelte,ts}'"
   },
   "dependencies": {
     "svelte-octicons": "^9.6.3"

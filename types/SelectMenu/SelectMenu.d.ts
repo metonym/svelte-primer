@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface SelectMenuProps {
   /**
@@ -22,14 +23,8 @@ export interface SelectMenuProps {
   align?: "left" | "right";
 }
 
-export default class SelectMenu {
-  $$prop_def: SelectMenuProps;
-  $$slot_def: {
-    default: {};
-    filter: {};
-    tabs: {};
-    title: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class SelectMenu extends SvelteComponentTyped<
+  SelectMenuProps,
+  {},
+  { default: {}; filter: {}; tabs: {}; title: {} }
+> {}

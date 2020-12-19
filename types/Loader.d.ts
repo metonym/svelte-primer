@@ -1,12 +1,10 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface LoaderProps {}
 
-export default class Loader {
-  $$prop_def: LoaderProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Loader extends SvelteComponentTyped<
+  LoaderProps,
+  {},
+  { default: {} }
+> {}

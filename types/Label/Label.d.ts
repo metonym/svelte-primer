@@ -1,12 +1,23 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface LabelProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
+export interface LabelProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
   title?: string;
 
   /**
    * @default "blue"
    */
-  color?: "blue" | "green" | "gray" | "gray-darker" | "orange";
+  color?:
+    | "blue"
+    | "green"
+    | "gray"
+    | "gray-darker"
+    | "orange"
+    | "yellow"
+    | "red"
+    | "purple"
+    | "pink";
 
   /**
    * @default false
@@ -14,12 +25,8 @@ export interface LabelProps extends svelte.JSX.HTMLAttributes<HTMLElementTagName
   outline?: boolean;
 }
 
-export default class Label {
-  $$prop_def: LabelProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: "click", cb: (event: WindowEventMap["click"]) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Label extends SvelteComponentTyped<
+  LabelProps,
+  { click: WindowEventMap["click"] },
+  { default: {} }
+> {}

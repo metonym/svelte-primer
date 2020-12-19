@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface AlertProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
+export interface AlertProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
   /**
    * @default false
    */
@@ -19,12 +21,8 @@ export interface AlertProps extends svelte.JSX.HTMLAttributes<HTMLElementTagName
   dismissable?: boolean;
 }
 
-export default class Alert {
-  $$prop_def: AlertProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: "dismiss", cb: (event: CustomEvent<any>) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Alert extends SvelteComponentTyped<
+  AlertProps,
+  { dismiss: CustomEvent<any> },
+  { default: {} }
+> {}

@@ -37,8 +37,9 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <img
   {...$$restProps}
-  class:avatar={true}
-  class:avatar-small={small}
-  class:avatar-child={child}
-  {width}
-  {height} />
+  class:avatar="{true}"
+  class:avatar-small="{small}"
+  class:avatar-child="{child}"
+  width="{width}"
+  height="{height}"
+/>

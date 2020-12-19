@@ -1,6 +1,8 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface BoxProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
+export interface BoxProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {
   border?: undefined | "dashed";
 
   /**
@@ -16,11 +18,8 @@ export interface BoxProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMa
   theme?: "blue" | "danger";
 }
 
-export default class Box {
-  $$prop_def: BoxProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Box extends SvelteComponentTyped<
+  BoxProps,
+  {},
+  { default: {} }
+> {}

@@ -1,12 +1,11 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
-export interface AvatarParentChildProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {}
+export interface AvatarParentChildProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["div"]> {}
 
-export default class AvatarParentChild {
-  $$prop_def: AvatarParentChildProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class AvatarParentChild extends SvelteComponentTyped<
+  AvatarParentChildProps,
+  {},
+  { default: {} }
+> {}

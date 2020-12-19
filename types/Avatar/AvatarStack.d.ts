@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface AvatarStackProps {
   /**
@@ -12,11 +13,8 @@ export interface AvatarStackProps {
   align?: "left" | "right";
 }
 
-export default class AvatarStack {
-  $$prop_def: AvatarStackProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class AvatarStack extends SvelteComponentTyped<
+  AvatarStackProps,
+  {},
+  { default: {} }
+> {}

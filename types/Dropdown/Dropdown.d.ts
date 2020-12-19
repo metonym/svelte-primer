@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponentTyped } from "svelte";
 
 export interface DropdownProps {
   /**
@@ -15,13 +16,15 @@ export interface DropdownProps {
    * @default false
    */
   dark?: boolean;
+
+  /**
+   * @default false
+   */
+  open?: boolean;
 }
 
-export default class Dropdown {
-  $$prop_def: DropdownProps;
-  $$slot_def: {
-    default: {};
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Dropdown extends SvelteComponentTyped<
+  DropdownProps,
+  {},
+  { default: {} }
+> {}
